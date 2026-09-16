@@ -30,7 +30,7 @@ export function LocaleToggle({ transparent = false }: { transparent?: boolean })
             aria-pressed={active}
             onClick={() => setLocale(option.value)}
             className={clsx(
-              "rounded-full px-2.5 py-1 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent",
+              "rounded-full px-2.5 py-1 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand",
               transparent
                 ? active
                   ? "bg-white text-ink"

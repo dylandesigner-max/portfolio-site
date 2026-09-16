@@ -26,7 +26,7 @@ export function ProjectsPreview() {
           </div>
           <Link
             href="/projects"
-            className="inline-flex items-center gap-1.5 text-sm font-semibold text-ink underline decoration-line underline-offset-4 transition-colors hover:decoration-accent"
+            className="inline-flex items-center gap-1.5 text-sm font-semibold text-ink underline decoration-line underline-offset-4 transition-colors hover:decoration-brand"
           >
             {t.projectsSection.viewAll}
             <IconArrowUpRight size={16} strokeWidth={2} aria-hidden="true" />
@@ -86,7 +86,7 @@ export function ProjectsPreview() {
                     href={project.caseHref}
                     target="_blank"
                     rel="noreferrer"
-                    className="group block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-md"
+                    className="group block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand rounded-md"
                   >
                     {card}
                   </a>

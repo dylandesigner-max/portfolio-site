@@ -10,7 +10,7 @@ import { Container } from "@/components/ui/container";
 gsap.registerPlugin(ScrollTrigger);
 
 const accentByIndex = [
-  "text-accent",
+  "text-brand",
   "text-ink",
   "text-ink",
   "text-ink",

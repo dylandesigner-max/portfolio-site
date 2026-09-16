@@ -95,7 +95,7 @@ export default function ProjectsPage() {
                     href={project.caseHref}
                     target="_blank"
                     rel="noreferrer"
-                    className="group block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-md"
+                    className="group block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand rounded-md"
                   >
                     {card}
                   </a>

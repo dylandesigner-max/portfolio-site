@@ -26,7 +26,7 @@ export function ContactCta() {
           <Reveal delay={0.18}>
             <Link
               href="/about#contact"
-              className="mt-10 inline-flex items-center gap-1.5 rounded-pill bg-bg px-6 py-3.5 text-sm font-semibold text-ink transition-transform hover:-translate-y-px active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+              className="mt-10 inline-flex items-center gap-1.5 rounded-pill bg-bg px-6 py-3.5 text-sm font-semibold text-ink transition-transform hover:-translate-y-px active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand"
             >
               {t.contactCta.ctaLabel}
               <IconArrowUpRight size={16} strokeWidth={2} aria-hidden="true" />

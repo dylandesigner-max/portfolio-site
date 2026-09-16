@@ -70,7 +70,7 @@ export function Navbar() {
       <div className="mx-auto flex h-16 max-w-[1400px] items-center justify-between px-4 md:px-8">
         <Link
           href="/"
-          className="flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm"
+          className="flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand rounded-sm"
           aria-label="Dylan Xavier, ir para a home"
         >
           <Image
@@ -98,7 +98,7 @@ export function Navbar() {
                 key={link.href}
                 href={link.href}
                 className={clsx(
-                  "text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm",
+                  "text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand rounded-sm",
                   transparent
                     ? active
                       ? "text-white"
@@ -120,7 +120,7 @@ export function Navbar() {
           <Link
             href="/about#contact"
             className={clsx(
-              "inline-flex items-center gap-1 rounded-pill px-4 py-2 text-sm font-semibold transition-transform hover:-translate-y-px active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent",
+              "inline-flex items-center gap-1 rounded-pill px-4 py-2 text-sm font-semibold transition-transform hover:-translate-y-px active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand",
               transparent ? "bg-white text-ink" : "bg-ink text-bg",
             )}
           >
@@ -137,7 +137,7 @@ export function Navbar() {
             aria-label={open ? t.nav.close : t.nav.menu}
             aria-expanded={open}
             className={clsx(
-              "flex h-9 w-9 items-center justify-center rounded-full border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent",
+              "flex h-9 w-9 items-center justify-center rounded-full border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand",
               transparent ? "border-white/30 text-white" : "border-line text-ink",
             )}
           >

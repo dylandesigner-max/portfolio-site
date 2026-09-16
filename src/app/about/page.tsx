@@ -131,7 +131,7 @@ export default function AboutPage() {
           <div className="mt-10 grid gap-4 sm:grid-cols-2 sm:max-w-xl">
             <a
               href={`mailto:${EMAIL}`}
-              className="group flex items-center justify-between rounded-md border border-line bg-bg px-5 py-4 transition-colors hover:border-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+              className="group flex items-center justify-between rounded-md border border-line bg-bg px-5 py-4 transition-colors hover:border-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand"
             >
               <span className="flex items-center gap-3">
                 <IconMail size={18} strokeWidth={1.75} aria-hidden="true" />
@@ -156,7 +156,7 @@ export default function AboutPage() {
               href={WHATSAPP_HREF}
               target="_blank"
               rel="noreferrer"
-              className="group flex items-center justify-between rounded-md border border-line bg-bg px-5 py-4 transition-colors hover:border-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+              className="group flex items-center justify-between rounded-md border border-line bg-bg px-5 py-4 transition-colors hover:border-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand"
             >
               <span className="flex items-center gap-3">
                 <IconBrandWhatsapp size={18} strokeWidth={1.75} aria-hidden="true" />

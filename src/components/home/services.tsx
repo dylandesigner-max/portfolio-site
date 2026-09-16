@@ -30,7 +30,7 @@ export function Services() {
                 key={service.title}
                 className="group relative overflow-visible rounded-md border border-line bg-bg-raised p-8 pt-10 transition-colors hover:border-ink/30"
               >
-                <span className="absolute -top-5 -right-5 flex h-14 w-14 items-center justify-center rounded-full bg-accent text-white shadow-[0_12px_24px_-8px_rgba(255,77,35,0.55)] transition-transform duration-300 group-hover:-translate-y-1 group-hover:rotate-6">
+                <span className="absolute -top-5 -right-5 flex h-14 w-14 items-center justify-center rounded-full bg-brand text-white shadow-[0_12px_24px_-8px_rgba(255,77,35,0.55)] transition-transform duration-300 group-hover:-translate-y-1 group-hover:rotate-6">
                   <Icon size={24} strokeWidth={1.6} aria-hidden="true" />
                 </span>
                 <Icon

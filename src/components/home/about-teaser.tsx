@@ -26,7 +26,7 @@ export function AboutTeaser() {
           <Reveal delay={0.18}>
             <Link
               href="/about"
-              className="mt-8 inline-flex items-center gap-1.5 text-sm font-semibold text-ink underline decoration-line underline-offset-4 transition-colors hover:decoration-accent"
+              className="mt-8 inline-flex items-center gap-1.5 text-sm font-semibold text-ink underline decoration-line underline-offset-4 transition-colors hover:decoration-brand"
             >
               {t.about.ctaLabel}
               <IconArrowUpRight size={16} strokeWidth={2} aria-hidden="true" />

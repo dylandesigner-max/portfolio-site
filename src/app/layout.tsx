@@ -8,9 +8,10 @@ import type { Locale } from "@/lib/i18n/dictionaries";
 import { Navbar } from "@/components/nav/navbar";
 import { Footer } from "@/components/footer/footer";
 import { CustomCursor } from "@/components/ui/custom-cursor";
+import { cn } from "@/lib/utils";
 
 const jakarta = Plus_Jakarta_Sans({
-  variable: "--font-jakarta",
+  variable: "--font-sans",
   subsets: ["latin"],
 });
 
@@ -31,7 +32,7 @@ export default async function RootLayout({
   return (
     <html
       lang={locale}
-      className={`${jakarta.variable} h-full antialiased`}
+      className={cn("h-full", "antialiased", jakarta.variable, "font-sans")}
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col bg-bg text-ink">

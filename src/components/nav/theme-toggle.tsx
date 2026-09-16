@@ -27,7 +27,7 @@ export function ThemeToggle({ transparent = false }: { transparent?: boolean }) 
       onClick={() => setTheme(isDark ? "light" : "dark")}
       aria-label={isDark ? "Ativar modo claro" : "Ativar modo escuro"}
       className={clsx(
-        "flex h-9 w-9 items-center justify-center rounded-full border transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent",
+        "flex h-9 w-9 items-center justify-center rounded-full border transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand",
         transparent
           ? "border-white/30 text-white hover:border-white"
           : "border-line text-ink hover:border-ink",
