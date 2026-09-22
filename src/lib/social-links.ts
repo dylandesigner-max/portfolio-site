@@ -8,9 +8,8 @@ export type SocialLink = {
   source?: BrandLogoSource;
 };
 
-// Placeholder handles: swap the hrefs for Dylan's real profiles.
 export const socialLinks: SocialLink[] = [
-  { platform: "Behance", handle: "@dylanxavier", href: "https://www.behance.net/dylanxavier", slug: "behance" },
-  { platform: "LinkedIn", handle: "/in/dylanxavier", href: "https://www.linkedin.com/in/dylanxavier", slug: "linkedin", source: "devicon" },
-  { platform: "GitHub", handle: "@dylanxavier", href: "https://github.com/dylanxavier", slug: "github" },
+  { platform: "Behance", handle: "@designerdylan", href: "https://www.behance.net/designerdylan", slug: "behance" },
+  { platform: "LinkedIn", handle: "/in/dylanfx", href: "https://www.linkedin.com/in/dylanfx/", slug: "linkedin", source: "devicon" },
+  { platform: "GitHub", handle: "@dylandesigner-max", href: "https://github.com/dylandesigner-max", slug: "github" },
 ];

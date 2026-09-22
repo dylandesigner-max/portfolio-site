@@ -45,6 +45,17 @@ export function SmoothScrollProvider({ children }: { children: React.ReactNode }
     lenis?.scrollTo(0, { immediate: true });
   }, [pathname, lenis]);
 
+  // Lazy-loaded images (and anything else that grows the page after mount)
+  // change document height without Lenis knowing, which leaves its internal
+  // scroll limit stale and the page unable to reach true bottom until a
+  // native scrollbar drag forces a recompute. Keep it in sync as content resizes.
+  useEffect(() => {
+    if (!lenis) return;
+    const resizeObserver = new ResizeObserver(() => lenis.resize());
+    resizeObserver.observe(document.documentElement);
+    return () => resizeObserver.disconnect();
+  }, [lenis]);
+
   return <LenisContext.Provider value={lenis}>{children}</LenisContext.Provider>;
 }
 

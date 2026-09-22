@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { MagnifyingGlass, SquaresFour, Stack, DeviceMobile } from "@phosphor-icons/react/dist/ssr";
 import type { Icon } from "@phosphor-icons/react";
 import { useLocale } from "@/lib/i18n/context";
@@ -40,15 +39,6 @@ export function FeaturesBento() {
         <Reveal delay={0.1}>
           <BentoGrid>
             <BentoCard className="md:col-span-2 md:row-span-2">
-              <div className="pointer-events-none absolute inset-0 opacity-[0.1]">
-                <Image
-                  src="/projects/contasco/detalhes-cliente.png"
-                  alt=""
-                  fill
-                  sizes="50vw"
-                  className="object-cover object-top"
-                />
-              </div>
               <div className="relative">
                 <IconBadge Icon={icons[0]} inverted />
               </div>

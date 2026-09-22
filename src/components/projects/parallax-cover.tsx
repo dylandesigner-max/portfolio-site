@@ -22,7 +22,15 @@ export function ParallaxCover({ src, alt }: { src: string; alt: string }) {
         style={reduce ? undefined : { y }}
         className="absolute inset-x-0 -top-[12%] -bottom-[12%]"
       >
-        <Image src={src} alt={alt} fill priority sizes="100vw" className="object-cover" />
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          priority
+          sizes="(min-width: 1440px) 1360px, calc(100vw - 40px)"
+          quality={90}
+          className="object-cover"
+        />
       </motion.div>
     </div>
   );

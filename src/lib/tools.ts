@@ -16,4 +16,6 @@ export const tools: Tool[] = [
   { slug: "css", label: "CSS3" },
   { slug: "javascript", label: "JavaScript" },
   { slug: "wordpress", label: "WordPress" },
+  { slug: "vscode", label: "VS Code", source: "devicon" },
+  { slug: "claude", label: "Claude Code" },
 ];

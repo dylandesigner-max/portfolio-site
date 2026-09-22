@@ -16,8 +16,31 @@ export type ProjectSection = {
   images: GalleryImage[];
 };
 
+// Media items for the video/gif gallery — same enable-switch/body/gallery
+// shape as ProjectSection, but for motion content instead of stills.
+export type MediaItem = {
+  src: string;
+  type: "video" | "gif";
+  alt?: LocalizedText;
+};
+
+export type MediaSection = {
+  enabled: boolean;
+  body?: LocalizedText;
+  items: MediaItem[];
+};
+
+// A closing full-bleed image, styled and animated exactly like the cover,
+// shown right before the related-projects block. Optional per project.
+export type BackCover = {
+  enabled: boolean;
+  src: string;
+  alt: LocalizedText;
+};
+
 export type ProjectContent = {
   cover: { src: string; alt: LocalizedText };
+  backCover: BackCover;
   projectUrl?: string;
   pdfHref?: string;
   about: { enabled: boolean; body: LocalizedText };
@@ -25,6 +48,7 @@ export type ProjectContent = {
   product: ProjectSection;
   research: ProjectSection;
   designSystem: ProjectSection;
+  videos: MediaSection;
 };
 
 export type Project = {
@@ -62,6 +86,7 @@ export const projects: Project[] = [
         src: "/projects/contasco/detalhes-cliente.png",
         alt: { pt: "Tela de Detalhes do Cliente do ContasCo", en: "ContasCo client details screen" },
       },
+      backCover: { enabled: false, src: "", alt: { pt: "", en: "" } },
       pdfHref: "/projects/contasco/ContasCo-Case-UXUI-Dylan.pdf",
       about: {
         enabled: true,
@@ -93,6 +118,7 @@ export const projects: Project[] = [
           { src: "/projects/contasco/design-system.png", alt: { pt: "Design system do ContasCo", en: "ContasCo design system" } },
         ],
       },
+      videos: { enabled: false, items: [] },
     },
   },
   {
@@ -113,6 +139,7 @@ export const projects: Project[] = [
         src: "/projects/taskfy/capa.png",
         alt: { pt: "Capa do projeto Taskfy", en: "Taskfy project cover" },
       },
+      backCover: { enabled: false, src: "", alt: { pt: "", en: "" } },
       about: {
         enabled: true,
         body: {
@@ -161,6 +188,7 @@ export const projects: Project[] = [
         ],
       },
       designSystem: { enabled: false, images: [] },
+      videos: { enabled: false, items: [] },
     },
   },
   {
@@ -181,6 +209,7 @@ export const projects: Project[] = [
         src: "/projects/moon-base/moon-base-01.png",
         alt: { pt: "Capa do projeto Moon Base", en: "Moon Base project cover" },
       },
+      backCover: { enabled: false, src: "", alt: { pt: "", en: "" } },
       about: {
         enabled: true,
         body: {
@@ -204,6 +233,184 @@ export const projects: Project[] = [
       },
       research: { enabled: false, images: [] },
       designSystem: { enabled: false, images: [] },
+      videos: { enabled: false, items: [] },
+    },
+  },
+  {
+    slug: "auge",
+    year: "2026",
+    role: { pt: "Product Designer", en: "Product Designer" },
+    title: "Auge",
+    tagline: {
+      pt: "Plataforma de infoprodutos com área de membros white label, checkout de alta conversão e experiência de streaming.",
+      en: "Infoproduct platform with a white-label member area, high-conversion checkout and a streaming-like experience.",
+    },
+    tags: ["SaaS", "EdTech", "Design System"],
+    image: "/projects/auge/capa.png",
+    imageAlt: { pt: "Capa do projeto Auge", en: "Auge project cover" },
+    size: "lg",
+    content: {
+      cover: {
+        src: "/projects/auge/capa.png",
+        alt: { pt: "Capa do projeto Auge", en: "Auge project cover" },
+      },
+      backCover: {
+        enabled: true,
+        src: "/projects/auge/contra-capa.png",
+        alt: { pt: "Contracapa do projeto Auge", en: "Auge project back cover" },
+      },
+      projectUrl: "https://augeoficial.com.br/institutional/index.html",
+      about: {
+        enabled: true,
+        body: {
+          pt: "Auge é uma plataforma de infoprodutos: produtores criam, editam e vendem seus produtos com fluxos ágeis e facilitados, enquanto alunos acessam e consomem seus cursos com uma experiência de streaming. A plataforma reúne área de membros white label, checkout de alta conversão, criador automático de landing pages, afiliados, co-produtores e muito mais.\n\nAtuo no time de Product Design conduzindo discoveries semanais: dinâmicas de pesquisa, co-criação e ideação com o time, comunicação de decisões de design para stakeholders e construção de protótipos navegáveis.",
+          en: "Auge is an infoproduct platform: creators build, edit and sell their products through fast, streamlined flows, while students access and consume their courses through a streaming-like experience. The platform brings together a white-label member area, a high-conversion checkout, an automatic landing page builder, affiliates, co-producers and more.\n\nI work on the Product Design team running weekly discoveries: research dynamics, co-creation and ideation with the team, communicating design decisions to stakeholders, and building navigable prototypes.",
+        },
+      },
+      foundations: {
+        enabled: true,
+        body: {
+          pt: "Paleta em tons de dourado sobre fundo escuro, a base da identidade Auge, com cores de apoio, tags de status e uma escala de cinzas dedicada à hierarquia de texto e elementos de interface.",
+          en: "A palette in gold tones over a dark base, the core of the Auge identity, with supporting accent colors, status tags, and a dedicated grayscale for text hierarchy and UI elements.",
+        },
+        images: [
+          { src: "/projects/auge/foundations-01.png", alt: { pt: "Paleta de cores da UI", en: "UI color palette" } },
+          { src: "/projects/auge/foundations-02.png", alt: { pt: "Fundações visuais", en: "Visual foundations" } },
+          { src: "/projects/auge/foundations-03.png", alt: { pt: "Fundações visuais", en: "Visual foundations" } },
+          { src: "/projects/auge/foundations-04.png", alt: { pt: "Fundações visuais", en: "Visual foundations" } },
+          { src: "/projects/auge/foundations-05.png", alt: { pt: "Fundações visuais", en: "Visual foundations" } },
+          { src: "/projects/auge/foundations-06.png", alt: { pt: "Fundações visuais", en: "Visual foundations" } },
+        ],
+      },
+      product: {
+        enabled: true,
+        body: {
+          pt: "Do login ao acompanhamento da jornada: página de vendas do infoproduto, player de aula com ferramentas de IA, painel de compras, gamificação por sequência e ranking, além da experiência mobile completa para alunos e produtores.",
+          en: "From login to journey tracking: the infoproduct sales page, a lesson player with AI tools, a purchases dashboard, streak and ranking gamification, plus the full mobile experience for students and producers.",
+        },
+        images: [
+          { src: "/projects/auge/produto-01.png", alt: { pt: "Tela de login", en: "Login screen" } },
+          { src: "/projects/auge/produto-02.png", alt: { pt: "Painel inicial, minhas compras", en: "Home dashboard, my purchases" } },
+          { src: "/projects/auge/produto-03.png", alt: { pt: "Player de aula com IA", en: "Lesson player with AI tools" } },
+          { src: "/projects/auge/produto-04.png", alt: { pt: "Página de vendas do infoproduto", en: "Infoproduct sales page" } },
+          { src: "/projects/auge/produto-05.png", alt: { pt: "Gamificação, minha jornada", en: "Gamification, my journey" } },
+          { src: "/projects/auge/produto-06.png", alt: { pt: "Área de membros, mobile", en: "Member area, mobile" } },
+          { src: "/projects/auge/produto-07.png", alt: { pt: "Produtos do produtor, mobile", en: "Producer's products, mobile" } },
+          { src: "/projects/auge/produto-08.png", alt: { pt: "Dashboard financeiro, mobile", en: "Financial dashboard, mobile" } },
+          { src: "/projects/auge/produto-09.png", alt: { pt: "Mockup de apresentação, minhas compras", en: "Presentation mockup, my purchases" } },
+        ],
+      },
+      research: {
+        enabled: true,
+        body: {
+          pt: "Discoveries semanais conduzidas com o time: desk research de concorrentes do mercado de infoprodutos e mapas de empatia para entender comportamento, dores e necessidades de produtores e alunos. As imagens abaixo estão em baixa resolução de propósito, para preservar informações sensíveis do produto.",
+          en: "Weekly discoveries run with the team: competitive desk research on the infoproduct market and empathy maps to understand producer and student behavior, pains and needs. The images below are intentionally low-resolution to protect sensitive product findings.",
+        },
+        images: [
+          { src: "/projects/auge/pesquisa-01.jpg", alt: { pt: "Desk research de concorrentes", en: "Competitive desk research" } },
+          { src: "/projects/auge/pesquisa-02.jpg", alt: { pt: "Mapas de empatia", en: "Empathy maps" } },
+        ],
+      },
+      designSystem: {
+        enabled: true,
+        body: {
+          pt: "Sistema de componentes documentado por página: botões (ação, IA, switch, busca, seletores), barras de progresso em múltiplos formatos e os demais elementos que sustentam tanto o painel do produtor quanto a área de membros.",
+          en: "A component system documented page by page: buttons (action, AI, switch, search, selectors), progress bars in multiple formats, and the remaining elements that power both the producer dashboard and the member area.",
+        },
+        images: [
+          { src: "/projects/auge/design-system-01.png", alt: { pt: "Capa do design system", en: "Design system cover" } },
+          { src: "/projects/auge/design-system-02.png", alt: { pt: "Botões", en: "Buttons" } },
+          { src: "/projects/auge/design-system-03.png", alt: { pt: "Barras de progresso", en: "Progress bars" } },
+        ],
+      },
+      videos: {
+        enabled: true,
+        body: {
+          pt: "Reveal da marca em vídeo e a animação de carregamento usada na plataforma: dois pequenos momentos de motion que reforçam a identidade Auge em uso.",
+          en: "The brand's video reveal and the platform's loading animation: two small motion moments that reinforce the Auge identity in use.",
+        },
+        items: [
+          { src: "/projects/auge/logo-reveal.mp4", type: "video", alt: { pt: "Reveal da marca Auge", en: "Auge brand reveal" } },
+          { src: "/projects/auge/loading.gif", type: "gif", alt: { pt: "Animação de carregamento", en: "Loading animation" } },
+        ],
+      },
+    },
+  },
+  {
+    slug: "gestao-a-vista",
+    year: "2026",
+    role: { pt: "Product Designer, ponta a ponta", en: "Product Designer, end to end" },
+    title: "Gestão à Vista",
+    tagline: {
+      pt: "Sistema omnichannel de CRM e Business Intelligence para o mercado de multipropriedade.",
+      en: "Omnichannel CRM and Business Intelligence system for the timeshare market.",
+    },
+    tags: ["SaaS", "B2B", "Design System"],
+    image: "/projects/gestao-a-vista/capa.png",
+    imageAlt: { pt: "Capa do projeto Gestão à Vista", en: "Gestão à Vista project cover" },
+    size: "lg",
+    content: {
+      cover: {
+        src: "/projects/gestao-a-vista/capa.png",
+        alt: { pt: "Capa do projeto Gestão à Vista", en: "Gestão à Vista project cover" },
+      },
+      backCover: { enabled: false, src: "", alt: { pt: "", en: "" } },
+      about: {
+        enabled: true,
+        body: {
+          pt: "Gestão à Vista é um sistema omnichannel construído para o nicho de multipropriedade, operando ao mesmo tempo como CRM, base de dados e Business Intelligence para a operação inteira do negócio.\n\nProjetei sozinho, do zero, tanto o design system quanto cada tela da interface: mais de 70 componentes autorais sustentando módulos de atendimento, conversas, tarefas, contatos, relatórios e insights, com suporte nativo a tema claro e escuro em toda a plataforma.",
+          en: "Gestão à Vista is an omnichannel system built for the timeshare industry, operating at once as a CRM, database and Business Intelligence layer for the entire business operation.\n\nI designed the whole thing solo, from scratch: both the design system and every interface screen, with 70+ original components powering modules for support, conversations, tasks, contacts, reports and insights, with native light and dark theme support across the whole platform.",
+        },
+      },
+      foundations: {
+        enabled: true,
+        body: {
+          pt: "Paleta semântica com estados de hover e feedback, tipografia em Plus Jakarta Sans e Manrope, e grid responsivo documentado para widescreen, desktop e mobile — a base que sustenta os mais de 70 componentes do design system.",
+          en: "A semantic color palette with hover and feedback states, typography in Plus Jakarta Sans and Manrope, and a responsive grid documented for widescreen, desktop and mobile — the foundation behind the design system's 70+ components.",
+        },
+        images: [
+          { src: "/projects/gestao-a-vista/foundations-01.png", alt: { pt: "Paleta de cores da UI", en: "UI color palette" } },
+          { src: "/projects/gestao-a-vista/foundations-02.png", alt: { pt: "Sistema tipográfico", en: "Typography system" } },
+          { src: "/projects/gestao-a-vista/foundations-03.png", alt: { pt: "Fundações visuais", en: "Visual foundations" } },
+          { src: "/projects/gestao-a-vista/foundations-04.png", alt: { pt: "Fundações visuais", en: "Visual foundations" } },
+          { src: "/projects/gestao-a-vista/foundations-05.png", alt: { pt: "Grid responsivo (breakpoints)", en: "Responsive grid (breakpoints)" } },
+          { src: "/projects/gestao-a-vista/foundations-06.png", alt: { pt: "Fundações visuais", en: "Visual foundations" } },
+          { src: "/projects/gestao-a-vista/foundations-07.png", alt: { pt: "Fundações visuais", en: "Visual foundations" } },
+          { src: "/projects/gestao-a-vista/foundations-08.png", alt: { pt: "Fundações visuais", en: "Visual foundations" } },
+        ],
+      },
+      product: {
+        enabled: true,
+        body: {
+          pt: "Da tela de login aos módulos de operação: painel inicial, CRM, conversas, tarefas e relatórios, todos desenhados em par com o tema claro e escuro nativo da plataforma, para que a operação funcione em qualquer condição de uso.",
+          en: "From the login screen to the operational modules: home dashboard, CRM, conversations, tasks and reports, all designed alongside the platform's native light and dark theme, so the operation works in any usage condition.",
+        },
+        images: [
+          { src: "/projects/gestao-a-vista/produto-01.png", alt: { pt: "Painel inicial, tema claro", en: "Home dashboard, light theme" } },
+          { src: "/projects/gestao-a-vista/produto-01-dark.png", alt: { pt: "Painel inicial, tema escuro", en: "Home dashboard, dark theme" } },
+          { src: "/projects/gestao-a-vista/produto-02.png", alt: { pt: "Tela de login, tema claro", en: "Login screen, light theme" } },
+          { src: "/projects/gestao-a-vista/produto-02-dark.png", alt: { pt: "Tela de login, tema escuro", en: "Login screen, dark theme" } },
+          { src: "/projects/gestao-a-vista/produto-03.png", alt: { pt: "Tela de erro, tema claro", en: "Error screen, light theme" } },
+          { src: "/projects/gestao-a-vista/produto-03-dark.png", alt: { pt: "Tela de erro, tema escuro", en: "Error screen, dark theme" } },
+          { src: "/projects/gestao-a-vista/produto-04.png", alt: { pt: "Módulo da operação, tema claro", en: "Operation module, light theme" } },
+          { src: "/projects/gestao-a-vista/produto-04-dark.png", alt: { pt: "Módulo da operação, tema escuro", en: "Operation module, dark theme" } },
+        ],
+      },
+      research: { enabled: false, images: [] },
+      designSystem: {
+        enabled: true,
+        body: {
+          pt: "Mais de 70 componentes autorais documentados por estado (default, hover, ativo, desabilitado, erro): botões primários e secundários, seletores, filtros, busca, checkboxes e switches, formando um sistema consistente o suficiente para sustentar toda a operação do produto.",
+          en: "70+ original components documented by state (default, hover, active, disabled, error): primary and secondary buttons, selectors, filters, search, checkboxes and switches, forming a system consistent enough to carry the entire product operation.",
+        },
+        images: [
+          { src: "/projects/gestao-a-vista/design-system-01.png", alt: { pt: "Botões e seletores", en: "Buttons and selectors" } },
+          { src: "/projects/gestao-a-vista/design-system-02.png", alt: { pt: "Componentes do design system", en: "Design system components" } },
+          { src: "/projects/gestao-a-vista/design-system-03.png", alt: { pt: "Componentes do design system", en: "Design system components" } },
+          { src: "/projects/gestao-a-vista/design-system-04.png", alt: { pt: "Checkboxes e switches", en: "Checkboxes and switches" } },
+        ],
+      },
+      videos: { enabled: false, items: [] },
     },
   },
   {
@@ -224,6 +431,7 @@ export const projects: Project[] = [
         src: "/projects/ellysium/capa.png",
         alt: { pt: "Capa do design system Ellysium", en: "Ellysium design system cover" },
       },
+      backCover: { enabled: false, src: "", alt: { pt: "", en: "" } },
       projectUrl: "https://ellysium.dylan-dsgner.workers.dev/pt-BR/",
       about: {
         enabled: true,
@@ -282,20 +490,7 @@ export const projects: Project[] = [
           { src: "/projects/ellysium/design-system-08.png", alt: { pt: "Componentes do design system", en: "Design system components" } },
         ],
       },
+      videos: { enabled: false, items: [] },
     },
-  },
-  {
-    slug: "bsc-cleaning",
-    year: "2024",
-    role: { pt: "UX/UI Designer", en: "UX/UI Designer" },
-    title: "BSC Cleaning Services",
-    tagline: {
-      pt: "Site institucional para empresa de serviços de limpeza.",
-      en: "Institutional website for a cleaning services company.",
-    },
-    tags: ["Web Design", "Branding"],
-    image: "https://picsum.photos/seed/bsc-cleaning-services/1200/900",
-    imageAlt: { pt: "Mockup do site BSC Cleaning Services", en: "BSC Cleaning Services website mockup" },
-    size: "md",
   },
 ];

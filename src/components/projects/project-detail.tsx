@@ -8,8 +8,14 @@ import { Reveal } from "@/components/ui/reveal";
 import { Button } from "@/components/ui/button";
 import { ParallaxCover } from "@/components/projects/parallax-cover";
 import { ImageGallery } from "@/components/projects/image-gallery";
+import { VideoGallery } from "@/components/projects/video-gallery";
 import { ProjectLink } from "@/components/projects/project-link";
-import type { Project, ProjectContent, ProjectSection as ProjectSectionData } from "@/lib/projects-data";
+import type {
+  MediaSection as MediaSectionData,
+  Project,
+  ProjectContent,
+  ProjectSection as ProjectSectionData,
+} from "@/lib/projects-data";
 
 function ProjectSection({
   label,
@@ -36,6 +42,37 @@ function ProjectSection({
       {section.images.length > 0 && (
         <Reveal delay={0.12} className="mt-10 md:mt-12">
           <ImageGallery images={section.images} sectionLabel={label} />
+        </Reveal>
+      )}
+    </Container>
+  );
+}
+
+function VideoSection({
+  label,
+  section,
+}: {
+  label: string;
+  section: MediaSectionData;
+}) {
+  const { locale } = useLocale();
+  if (!section.enabled || (section.items.length === 0 && !section.body)) return null;
+
+  return (
+    <Container className="border-t border-line py-16 md:py-24">
+      <Reveal>
+        <h2 className="font-mono text-sm uppercase tracking-[0.1em] text-ink-faint">{label}</h2>
+      </Reveal>
+      {section.body && (
+        <Reveal delay={0.06}>
+          <p className="mt-4 max-w-[65ch] whitespace-pre-line text-base leading-relaxed text-ink-soft md:text-lg">
+            {locale === "pt" ? section.body.pt : section.body.en}
+          </p>
+        </Reveal>
+      )}
+      {section.items.length > 0 && (
+        <Reveal delay={0.12} className="mt-10 md:mt-12">
+          <VideoGallery items={section.items} sectionLabel={label} />
         </Reveal>
       )}
     </Container>
@@ -141,6 +178,18 @@ export function ProjectDetail({
       <ProjectSection label={t.projectPage.product} section={content.product} />
       <ProjectSection label={t.projectPage.research} section={content.research} />
       <ProjectSection label={t.projectPage.designSystem} section={content.designSystem} />
+      <VideoSection label={t.projectPage.videos} section={content.videos} />
+
+      {content.backCover.enabled && (
+        <Container className="border-t border-line py-16 md:py-24">
+          <Reveal>
+            <ParallaxCover
+              src={content.backCover.src}
+              alt={locale === "pt" ? content.backCover.alt.pt : content.backCover.alt.en}
+            />
+          </Reveal>
+        </Container>
+      )}
 
       {relatedProjects.length > 0 && (
         <Container className="border-t border-line py-16 md:py-24">

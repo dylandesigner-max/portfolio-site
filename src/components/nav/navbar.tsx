@@ -113,13 +113,14 @@ export function Navbar() {
               <ul className="flex flex-col">
                 {links.map((link, i) => {
                   const active = link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
+                  const isLast = i === links.length - 1;
                   return (
                     <motion.li
                       key={link.href}
                       initial={reduce ? { opacity: 1 } : { opacity: 0, y: 32 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.5, delay: reduce ? 0 : 0.15 + i * 0.07, ease: [0.16, 1, 0.3, 1] }}
-                      className="border-b border-line"
+                      className={cn(!isLast && "border-b border-line")}
                     >
                       <Link
                         href={link.href}
@@ -146,7 +147,7 @@ export function Navbar() {
               <Button href="/about#contact" variant="primary" className="w-fit">
                 {t.nav.talk}
               </Button>
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3 md:hidden">
                 <LocaleToggle />
                 <ThemeToggle />
               </div>

@@ -9,9 +9,13 @@ import { Reveal } from "@/components/ui/reveal";
 import { ProjectLink } from "@/components/projects/project-link";
 import { projects } from "@/lib/projects-data";
 
+const FEATURED_SLUGS = ["auge", "ellysium", "gestao-a-vista"];
+
 export function ProjectsShowcase() {
   const { t, locale } = useLocale();
-  const featured = projects.filter((p) => p.content).slice(0, 3);
+  const featured = FEATURED_SLUGS.map((slug) => projects.find((p) => p.slug === slug && p.content)).filter(
+    (p): p is (typeof projects)[number] => Boolean(p),
+  );
 
   return (
     <section className="border-t border-line py-24 md:py-32">
