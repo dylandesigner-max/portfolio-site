@@ -1,11 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
 import { useLocale } from "@/lib/i18n/context";
 import { Container } from "@/components/ui/container";
 import { Reveal } from "@/components/ui/reveal";
+import { ProjectLink } from "@/components/projects/project-link";
 import { projects } from "@/lib/projects-data";
 
 export default function ProjectsPage() {
@@ -74,9 +74,9 @@ export default function ProjectsPage() {
             return (
               <Reveal key={project.slug} delay={(i % 2) * 0.08}>
                 {project.content ? (
-                  <Link href={`/projects/${project.slug}`} data-cursor-hover className="group block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-card">
+                  <ProjectLink href={`/projects/${project.slug}`} data-cursor-hover className="group block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-card">
                     {card}
-                  </Link>
+                  </ProjectLink>
                 ) : (
                   <div className="group">{card}</div>
                 )}

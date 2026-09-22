@@ -10,6 +10,7 @@ import { Navbar } from "@/components/nav/navbar";
 import { Footer } from "@/components/footer/footer";
 import { CustomCursor } from "@/components/ui/custom-cursor";
 import { SmoothScrollProvider } from "@/lib/smooth-scroll";
+import { RouteTransitionProvider } from "@/components/providers/route-transition";
 import { cn } from "@/lib/utils";
 
 const archivo = Rethink_Sans({
@@ -47,13 +48,15 @@ export default async function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <LocaleProvider initialLocale={locale}>
             <SmoothScrollProvider>
-              <div className="grain-overlay" aria-hidden="true" />
-              <CustomCursor />
-              <Navbar />
-              <main className="flex-1">
-                <PageTransition>{children}</PageTransition>
-              </main>
-              <Footer />
+              <RouteTransitionProvider>
+                <div className="grain-overlay" aria-hidden="true" />
+                <CustomCursor />
+                <Navbar />
+                <main className="flex-1">
+                  <PageTransition>{children}</PageTransition>
+                </main>
+                <Footer />
+              </RouteTransitionProvider>
             </SmoothScrollProvider>
           </LocaleProvider>
         </ThemeProvider>

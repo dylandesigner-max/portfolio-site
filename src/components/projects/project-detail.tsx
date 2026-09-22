@@ -1,18 +1,53 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, DownloadSimple } from "@phosphor-icons/react/dist/ssr";
+import { ArrowLeft, ArrowUpRight, DownloadSimple } from "@phosphor-icons/react/dist/ssr";
 import { useLocale } from "@/lib/i18n/context";
 import { Container } from "@/components/ui/container";
 import { Reveal } from "@/components/ui/reveal";
 import { Button } from "@/components/ui/button";
-import type { Project, ProjectContent } from "@/lib/projects-data";
+import { ParallaxCover } from "@/components/projects/parallax-cover";
+import { ImageGallery } from "@/components/projects/image-gallery";
+import { ProjectLink } from "@/components/projects/project-link";
+import type { Project, ProjectContent, ProjectSection as ProjectSectionData } from "@/lib/projects-data";
+
+function ProjectSection({
+  label,
+  section,
+}: {
+  label: string;
+  section: ProjectSectionData;
+}) {
+  const { locale } = useLocale();
+  if (!section.enabled || (section.images.length === 0 && !section.body)) return null;
+
+  return (
+    <Container className="border-t border-line py-16 md:py-24">
+      <Reveal>
+        <h2 className="font-mono text-sm uppercase tracking-[0.1em] text-ink-faint">{label}</h2>
+      </Reveal>
+      {section.body && (
+        <Reveal delay={0.06}>
+          <p className="mt-4 max-w-[65ch] whitespace-pre-line text-base leading-relaxed text-ink-soft md:text-lg">
+            {locale === "pt" ? section.body.pt : section.body.en}
+          </p>
+        </Reveal>
+      )}
+      {section.images.length > 0 && (
+        <Reveal delay={0.12} className="mt-10 md:mt-12">
+          <ImageGallery images={section.images} sectionLabel={label} />
+        </Reveal>
+      )}
+    </Container>
+  );
+}
 
 export function ProjectDetail({
   project,
+  relatedProjects,
 }: {
   project: Project & { content: ProjectContent };
+  relatedProjects: Project[];
 }) {
   const { t, locale } = useLocale();
   const content = project.content;
@@ -39,6 +74,34 @@ export function ProjectDetail({
             <p className="mt-5 max-w-xl text-base leading-relaxed text-ink-soft md:text-lg">
               {locale === "pt" ? project.tagline.pt : project.tagline.en}
             </p>
+
+            {(content.projectUrl || content.pdfHref) && (
+              <div className="mt-6 flex flex-wrap gap-3">
+                {content.projectUrl && (
+                  <Button
+                    href={content.projectUrl}
+                    external
+                    target="_blank"
+                    rel="noreferrer"
+                    variant="outline"
+                  >
+                    {t.projectPage.viewProject}
+                  </Button>
+                )}
+                {content.pdfHref && (
+                  <Button
+                    href={content.pdfHref}
+                    external
+                    target="_blank"
+                    rel="noreferrer"
+                    variant="outline"
+                    iconNode={<DownloadSimple size={16} weight="bold" aria-hidden="true" />}
+                  >
+                    {t.projectPage.downloadPdf}
+                  </Button>
+                )}
+              </div>
+            )}
           </div>
           <div className="flex flex-wrap gap-2">
             {project.tags.map((tag) => (
@@ -52,63 +115,73 @@ export function ProjectDetail({
 
       <Container>
         <Reveal>
-          <div className="relative aspect-[16/10] overflow-hidden rounded-card border border-line bg-bg-raised">
-            <Image
-              src={project.image}
-              alt={locale === "pt" ? project.imageAlt.pt : project.imageAlt.en}
-              fill
-              sizes="100vw"
-              priority
-              className="object-cover object-top"
-            />
-          </div>
+          <ParallaxCover
+            src={content.cover.src}
+            alt={locale === "pt" ? content.cover.alt.pt : content.cover.alt.en}
+          />
         </Reveal>
       </Container>
 
-      <Container className="grid gap-10 py-16 md:grid-cols-[1fr_1.4fr] md:gap-16 md:py-24">
-        <Reveal>
-          <h2 className="font-mono text-sm uppercase tracking-[0.1em] text-ink-faint">
-            {t.projectPage.overview}
-          </h2>
-        </Reveal>
-        <div className="flex flex-col gap-5">
-          {content.overview.map((paragraph, i) => (
-            <Reveal key={i} delay={i * 0.06}>
-              <p className="max-w-[65ch] text-base leading-relaxed text-ink-soft md:text-lg">
-                {locale === "pt" ? paragraph.pt : paragraph.en}
-              </p>
-            </Reveal>
-          ))}
-        </div>
-      </Container>
-
-      {content.gallery.length > 0 && (
-        <Container className="border-t border-line py-16 md:py-24">
+      {content.about.enabled && (
+        <Container className="grid gap-6 py-16 md:grid-cols-[1fr_1.4fr] md:gap-16 md:py-24">
           <Reveal>
-            <h2 className="mb-10 font-mono text-sm uppercase tracking-[0.1em] text-ink-faint md:mb-14">
-              {t.projectPage.gallery}
+            <h2 className="font-mono text-sm uppercase tracking-[0.1em] text-ink-faint">
+              {t.projectPage.about}
             </h2>
           </Reveal>
-          <div className="flex flex-col gap-16 md:gap-24">
-            {content.gallery.map((item, i) => {
-              const caption = locale === "pt" ? item.caption.pt : item.caption.en;
-              return (
-                <Reveal key={item.src} delay={(i % 3) * 0.05}>
-                  <div className="relative overflow-hidden rounded-card border border-line bg-bg-raised">
-                    <Image
-                      src={item.src}
-                      alt={caption || project.title}
-                      width={1600}
-                      height={1000}
-                      className="h-auto w-full object-cover"
+          <Reveal delay={0.06}>
+            <p className="max-w-[65ch] whitespace-pre-line text-base leading-relaxed text-ink-soft md:text-lg">
+              {locale === "pt" ? content.about.body.pt : content.about.body.en}
+            </p>
+          </Reveal>
+        </Container>
+      )}
+
+      <ProjectSection label={t.projectPage.foundations} section={content.foundations} />
+      <ProjectSection label={t.projectPage.product} section={content.product} />
+      <ProjectSection label={t.projectPage.research} section={content.research} />
+      <ProjectSection label={t.projectPage.designSystem} section={content.designSystem} />
+
+      {relatedProjects.length > 0 && (
+        <Container className="border-t border-line py-16 md:py-24">
+          <Reveal>
+            <h2 className="font-mono text-sm uppercase tracking-[0.1em] text-ink-faint">
+              {t.projectPage.relatedTitle}
+            </h2>
+          </Reveal>
+          <div className="mt-8 grid gap-6 md:grid-cols-2">
+            {relatedProjects.map((related, i) => (
+              <Reveal key={related.slug} delay={i * 0.08}>
+                <ProjectLink
+                  href={`/projects/${related.slug}`}
+                  data-cursor-hover
+                  className="group block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-card"
+                >
+                  <div className="relative aspect-[16/11] overflow-hidden rounded-card border border-line bg-bg-raised">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={related.image}
+                      alt={locale === "pt" ? related.imageAlt.pt : related.imageAlt.en}
+                      className="h-full w-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-[1.03]"
                     />
                   </div>
-                  {caption && (
-                    <p className="mt-4 max-w-xl text-sm leading-relaxed text-ink-faint">{caption}</p>
-                  )}
-                </Reveal>
-              );
-            })}
+                  <div className="mt-4 flex items-center justify-between gap-4">
+                    <div>
+                      <h3 className="text-lg font-medium text-ink">{related.title}</h3>
+                      <p className="mt-1 text-sm text-ink-soft">
+                        {locale === "pt" ? related.tagline.pt : related.tagline.en}
+                      </p>
+                    </div>
+                    <ArrowUpRight
+                      size={18}
+                      weight="bold"
+                      className="shrink-0 text-ink-faint transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-ink"
+                      aria-hidden="true"
+                    />
+                  </div>
+                </ProjectLink>
+              </Reveal>
+            ))}
           </div>
         </Container>
       )}
@@ -121,23 +194,9 @@ export function ProjectDetail({
             </h2>
             <p className="mt-2 max-w-md text-sm leading-relaxed text-ink-soft">{t.projectPage.nextBody}</p>
           </div>
-          <div className="flex flex-wrap gap-3">
-            {content.pdfHref && (
-              <Button
-                href={content.pdfHref}
-                external
-                target="_blank"
-                rel="noreferrer"
-                variant="outline"
-                iconNode={<DownloadSimple size={16} weight="bold" aria-hidden="true" />}
-              >
-                {t.projectPage.downloadPdf}
-              </Button>
-            )}
-            <Button href="/projects" variant="primary">
-              {t.projectPage.viewAll}
-            </Button>
-          </div>
+          <Button href="/projects" variant="primary">
+            {t.projectPage.viewAll}
+          </Button>
         </Container>
       </section>
     </div>

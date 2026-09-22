@@ -21,6 +21,18 @@ export async function generateMetadata({
   };
 }
 
+function pickRelated(currentSlug: string, count: number) {
+  const pool = projects.filter((p) => p.content && p.slug !== currentSlug);
+  const picked: typeof pool = [];
+  const remaining = [...pool];
+  while (picked.length < count && remaining.length > 0) {
+    const index = Math.floor(Math.random() * remaining.length);
+    picked.push(remaining[index]);
+    remaining.splice(index, 1);
+  }
+  return picked;
+}
+
 export default async function ProjectPage({
   params,
 }: {
@@ -33,5 +45,12 @@ export default async function ProjectPage({
     notFound();
   }
 
-  return <ProjectDetail project={{ ...project, content: project.content }} />;
+  const relatedProjects = pickRelated(slug, 2);
+
+  return (
+    <ProjectDetail
+      project={{ ...project, content: project.content }}
+      relatedProjects={relatedProjects}
+    />
+  );
 }

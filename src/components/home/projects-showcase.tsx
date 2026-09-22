@@ -6,6 +6,7 @@ import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
 import { useLocale } from "@/lib/i18n/context";
 import { Container } from "@/components/ui/container";
 import { Reveal } from "@/components/ui/reveal";
+import { ProjectLink } from "@/components/projects/project-link";
 import { projects } from "@/lib/projects-data";
 
 export function ProjectsShowcase() {
@@ -40,7 +41,7 @@ export function ProjectsShowcase() {
               delay={i * 0.08}
               className={i === 0 ? "md:col-span-2 md:row-span-2" : undefined}
             >
-              <Link
+              <ProjectLink
                 href={`/projects/${project.slug}`}
                 data-cursor-hover
                 className="group block h-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-card"
@@ -75,7 +76,7 @@ export function ProjectsShowcase() {
                     </div>
                   </div>
                 </div>
-              </Link>
+              </ProjectLink>
             </Reveal>
           ))}
         </div>
