@@ -337,6 +337,67 @@ export const projects: Project[] = [
     },
   },
   {
+    slug: "pronto",
+    year: "2026",
+    role: { pt: "UX/UI Designer, ponta a ponta", en: "UX/UI Designer, end to end" },
+    title: "Pronto",
+    tagline: {
+      pt: "Superapp de delivery que une lanches, mercado e entregas de marketplace.",
+      en: "Delivery superapp combining snacks, groceries and marketplace deliveries.",
+    },
+    tags: ["Landing Page", "App Design", "Branding"],
+    image: "/projects/pronto/capa.png",
+    imageAlt: { pt: "Capa do projeto Pronto", en: "Pronto project cover" },
+    size: "md",
+    content: {
+      cover: {
+        src: "/projects/pronto/capa.png",
+        alt: { pt: "Capa do projeto Pronto", en: "Pronto project cover" },
+      },
+      backCover: { enabled: false, src: "", alt: { pt: "", en: "" } },
+      about: {
+        enabled: true,
+        body: {
+          pt: "Pronto é um superapp de delivery que combina em um só lugar pedidos de lanches e snacks, compras de mercado e entregas de produtos de marketplace. Foi um projeto curto e objetivo: em pouco tempo, desenvolvi a identidade visual completa da marca, o styleguide, uma landing page moderna de alta conversão para a campanha \"Pronto Week\", três telas do aplicativo e dois criativos para divulgação.\n\nA proposta era transmitir agilidade e simpatia (\"1,2,3... e pronto!\") através de uma paleta vibrante e uma mascote simples: o polegar para cima que dá nome à marca.",
+          en: "Pronto is a delivery superapp that brings snack orders, grocery shopping and marketplace deliveries together in one place. It was a short, focused project: in a short timeframe I built the brand's full visual identity, the styleguide, a modern high-conversion landing page for the \"Pronto Week\" campaign, three app screens and two promotional creatives.\n\nThe brief was to convey speed and friendliness (\"1,2,3... and done!\") through a vibrant palette and a simple mascot: the thumbs-up that gives the brand its name.",
+        },
+      },
+      foundations: {
+        enabled: true,
+        body: {
+          pt: "Paleta vibrante em tons de laranja, rosa e verde, com variações pastel e escuras para contraste, tipografia Figtree e a logomarca em suas variações de cor — a base que sustenta toda a comunicação da Pronto.",
+          en: "A vibrant palette in orange, pink and green tones, with pastel and dark variants for contrast, Figtree typography and the logo in its color variations — the foundation behind all of Pronto's communication.",
+        },
+        images: [
+          { src: "/projects/pronto/foundations-01.png", alt: { pt: "Paleta de cores", en: "Color palette" } },
+          { src: "/projects/pronto/foundations-02.png", alt: { pt: "Sistema tipográfico", en: "Typography system" } },
+          { src: "/projects/pronto/foundations-03.png", alt: { pt: "Fundações visuais", en: "Visual foundations" } },
+          { src: "/projects/pronto/foundations-04.png", alt: { pt: "Logomarca", en: "Logo mark" } },
+          { src: "/projects/pronto/foundations-05.png", alt: { pt: "Fundações visuais", en: "Visual foundations" } },
+          { src: "/projects/pronto/foundations-06.png", alt: { pt: "Fundações visuais", en: "Visual foundations" } },
+        ],
+      },
+      product: {
+        enabled: true,
+        body: {
+          pt: "Da landing page da campanha \"Pronto Week\" às telas do app: onboarding com fotos apetitosas, home com categorias e ofertas em destaque, e o acompanhamento do pedido em tempo real. Os criativos reforçam a mesma linguagem visual para redes sociais e campanhas.",
+          en: "From the \"Pronto Week\" campaign landing page to the app screens: onboarding with appetizing photography, a home screen with categories and featured deals, and real-time order tracking. The creatives extend the same visual language into social and campaign assets.",
+        },
+        images: [
+          { src: "/projects/pronto/website.png", alt: { pt: "Landing page da campanha Pronto Week", en: "Pronto Week campaign landing page" } },
+          { src: "/projects/pronto/app-01.png", alt: { pt: "Onboarding do app", en: "App onboarding" } },
+          { src: "/projects/pronto/app-02.png", alt: { pt: "Tela inicial do app", en: "App home screen" } },
+          { src: "/projects/pronto/app-03.png", alt: { pt: "Acompanhamento do pedido", en: "Order tracking screen" } },
+          { src: "/projects/pronto/criativo-01.png", alt: { pt: "Criativo de campanha", en: "Campaign creative" } },
+          { src: "/projects/pronto/criativo-02.png", alt: { pt: "Criativo de campanha", en: "Campaign creative" } },
+        ],
+      },
+      research: { enabled: false, images: [] },
+      designSystem: { enabled: false, images: [] },
+      videos: { enabled: false, items: [] },
+    },
+  },
+  {
     slug: "gestao-a-vista",
     year: "2026",
     role: { pt: "Product Designer, ponta a ponta", en: "Product Designer, end to end" },
