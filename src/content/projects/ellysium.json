@@ -15,7 +15,7 @@
     "Branding",
     "UI Design"
   ],
-  "image": "/projects/ellysium/capa.png",
+  "image": "/projects/ellysium/capa-revon-zaig1.png",
   "imageAlt": {
     "pt": "Capa do projeto Ellysium, design system da Revon",
     "en": "Ellysium project cover, Revon's design system"
@@ -23,15 +23,15 @@
   "size": "lg",
   "content": {
     "cover": {
-      "src": "/projects/ellysium/capa.png",
+      "src": "/projects/ellysium/capa-revon-ntwvi.png",
       "alt": {
         "pt": "Capa do design system Ellysium",
         "en": "Ellysium design system cover"
       }
     },
     "backCover": {
-      "enabled": false,
-      "src": "",
+      "enabled": true,
+      "src": "/projects/ellysium/contracapa-revon-ou9m3.png",
       "alt": {
         "pt": "",
         "en": ""
@@ -126,6 +126,15 @@
         },
         {
           "src": "/projects/ellysium/branding-08.png"
+        },
+        {
+          "src": "/projects/ellysium/produto01-revon-x8a6i.png"
+        },
+        {
+          "src": "/projects/ellysium/produto02-revon-eruvh.png"
+        },
+        {
+          "src": "/projects/ellysium/produto03-revon-vdyfa.png"
         }
       ]
     },
