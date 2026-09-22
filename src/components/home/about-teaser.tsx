@@ -37,7 +37,7 @@ function WordText({
           key={wi}
           data-word
           className="mr-[0.22em] inline-block whitespace-nowrap"
-          style={reduce ? undefined : { opacity: 0.08, transform: "translateY(6px)" }}
+          style={reduce ? undefined : { opacity: 0, transform: "translateY(6px)" }}
         >
           {word}
         </span>

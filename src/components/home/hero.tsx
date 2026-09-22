@@ -54,7 +54,7 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative isolate flex h-[760px] flex-col overflow-hidden pt-24 md:h-[860px]"
+      className="relative isolate flex h-[620px] flex-col overflow-hidden pt-24 md:h-[700px]"
     >
       <InteractiveGrid />
       <div
