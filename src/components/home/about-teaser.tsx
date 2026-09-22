@@ -15,7 +15,12 @@ function splitToWords(text: string) {
   return text.split(" ").filter(Boolean);
 }
 
-function CharText({
+// Word-level reveal (not per-character): animating `filter: blur()` on
+// dozens of individual character nodes during a scroll-scrubbed tween was
+// expensive enough to visibly stutter on mobile. Opacity + transform on far
+// fewer word-sized nodes is compositor-friendly and keeps the same
+// scroll-tied reveal effect at a fraction of the cost.
+function WordText({
   text,
   className,
   reduce,
@@ -28,21 +33,13 @@ function CharText({
   return (
     <span className={className}>
       {words.map((word, wi) => (
-        <span key={wi} className="mr-[0.22em] inline-block whitespace-nowrap">
-          {word.split("").map((char, ci) => (
-            <span
-              key={ci}
-              data-char
-              className="inline-block"
-              style={
-                reduce
-                  ? undefined
-                  : { opacity: 0.08, filter: "blur(6px)", transform: "translateY(6px)" }
-              }
-            >
-              {char}
-            </span>
-          ))}
+        <span
+          key={wi}
+          data-word
+          className="mr-[0.22em] inline-block whitespace-nowrap"
+          style={reduce ? undefined : { opacity: 0.08, transform: "translateY(6px)" }}
+        >
+          {word}
         </span>
       ))}
     </span>
@@ -73,8 +70,8 @@ export function AboutTeaser() {
     if (reduce || !wrapperRef.current) return;
 
     const ctx = gsap.context(() => {
-      const headlineChars = headlineRef.current!.querySelectorAll("[data-char]");
-      const bodyChars = bodyRef.current!.querySelectorAll("[data-char]");
+      const headlineWords = headlineRef.current!.querySelectorAll("[data-word]");
+      const bodyWords = bodyRef.current!.querySelectorAll("[data-word]");
       const counters = stats.map(() => ({ value: 0 }));
 
       const tl = gsap.timeline({
@@ -88,12 +85,12 @@ export function AboutTeaser() {
       });
 
       tl.to(
-        headlineChars,
-        { opacity: 1, filter: "blur(0px)", y: 0, stagger: 0.02, ease: "none", duration: 0.4 },
+        headlineWords,
+        { opacity: 1, y: 0, stagger: 0.12, ease: "none", duration: 0.4 },
         0,
       ).to(
-        bodyChars,
-        { opacity: 1, filter: "blur(0px)", y: 0, stagger: 0.006, ease: "none", duration: 0.5 },
+        bodyWords,
+        { opacity: 1, y: 0, stagger: 0.03, ease: "none", duration: 0.5 },
         0.2,
       );
 
@@ -145,11 +142,11 @@ export function AboutTeaser() {
               ref={headlineRef}
               className="font-display text-3xl font-medium leading-[1.15] tracking-tight text-ink text-balance md:text-6xl"
             >
-              <CharText text={t.homeTeaser.headline} reduce={!!reduce} />
+              <WordText text={t.homeTeaser.headline} reduce={!!reduce} />
             </h2>
 
             <p ref={bodyRef} className="mx-auto mt-8 max-w-[56ch] text-lg leading-relaxed text-ink-soft md:text-2xl">
-              <CharText text={t.homeTeaser.miniBio} reduce={!!reduce} />
+              <WordText text={t.homeTeaser.miniBio} reduce={!!reduce} />
             </p>
 
             <div className="mx-auto mt-16 grid max-w-2xl grid-cols-3 gap-6 md:mt-20">

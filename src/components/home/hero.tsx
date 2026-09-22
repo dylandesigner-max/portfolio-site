@@ -54,9 +54,13 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative isolate flex min-h-[100dvh] flex-col overflow-hidden pt-24"
+      className="relative isolate flex h-[760px] flex-col overflow-hidden pt-24 md:h-[860px]"
     >
       <InteractiveGrid />
+      <div
+        className="pointer-events-none absolute inset-0 z-[1] bg-bg opacity-70 md:hidden"
+        aria-hidden="true"
+      />
 
       <Container className="relative z-10 flex flex-1 flex-col justify-between pb-12 md:pb-16">
         <div>

@@ -54,7 +54,8 @@ export function Button({
     variant === "primary" && "bg-ink text-bg",
     variant === "outline" && "border border-line text-ink",
     variant === "accent" && "bg-accent text-accent-ink",
-    variant === "inverted-outline" && "border border-bg/25 text-bg",
+    variant === "inverted-outline" &&
+      "border border-[color-mix(in_srgb,var(--bg)_25%,transparent)] text-bg",
     className,
   );
 

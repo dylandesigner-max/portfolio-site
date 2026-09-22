@@ -117,7 +117,7 @@ export function ImageGallery({
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.25 }}
-                className="fixed inset-0 z-[95] bg-ink/80 p-3 backdrop-blur-md md:p-10"
+                className="fixed inset-0 z-[95] bg-[color-mix(in_srgb,var(--ink)_80%,transparent)] p-3 backdrop-blur-md md:p-10"
                 onClick={() => setActiveIndex(null)}
               >
                 <motion.div

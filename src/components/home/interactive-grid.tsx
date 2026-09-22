@@ -18,6 +18,11 @@ export function InteractiveGrid() {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
+    // Touch devices report pointermove for finger drags too (including
+    // scroll gestures), which made the dots yank around on every swipe.
+    // Coarse-pointer devices just get the auto-drifting animation instead.
+    const isCoarsePointer = window.matchMedia("(pointer: coarse)").matches;
+
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
     const spacing = 36;
     const radius = 170;
@@ -114,15 +119,19 @@ export function InteractiveGrid() {
     resize();
     const resizeObserver = new ResizeObserver(resize);
     resizeObserver.observe(parent);
-    window.addEventListener("pointermove", handlePointerMove);
-    document.documentElement.addEventListener("pointerleave", handlePointerLeave);
+    if (!isCoarsePointer) {
+      window.addEventListener("pointermove", handlePointerMove);
+      document.documentElement.addEventListener("pointerleave", handlePointerLeave);
+    }
     frame = requestAnimationFrame(draw);
 
     return () => {
       cancelAnimationFrame(frame);
       resizeObserver.disconnect();
-      window.removeEventListener("pointermove", handlePointerMove);
-      document.documentElement.removeEventListener("pointerleave", handlePointerLeave);
+      if (!isCoarsePointer) {
+        window.removeEventListener("pointermove", handlePointerMove);
+        document.documentElement.removeEventListener("pointerleave", handlePointerLeave);
+      }
     };
   }, [reduce]);
 
