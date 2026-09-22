@@ -1,0 +1,206 @@
+{
+  "slug": "ellysium",
+  "year": "2026",
+  "role": {
+    "pt": "Product Designer, ponta a ponta",
+    "en": "Product Designer, end to end"
+  },
+  "title": "Ellysium",
+  "tagline": {
+    "pt": "Design system e identidade de marca para o ecossistema Revon.",
+    "en": "Design system and brand identity for the Revon ecosystem."
+  },
+  "tags": [
+    "Design System",
+    "Branding",
+    "UI Design"
+  ],
+  "image": "/projects/ellysium/capa.png",
+  "imageAlt": {
+    "pt": "Capa do projeto Ellysium, design system da Revon",
+    "en": "Ellysium project cover, Revon's design system"
+  },
+  "size": "lg",
+  "content": {
+    "cover": {
+      "src": "/projects/ellysium/capa.png",
+      "alt": {
+        "pt": "Capa do design system Ellysium",
+        "en": "Ellysium design system cover"
+      }
+    },
+    "backCover": {
+      "enabled": false,
+      "src": "",
+      "alt": {
+        "pt": "",
+        "en": ""
+      }
+    },
+    "projectUrl": "https://ellysium.dylan-dsgner.workers.dev/pt-BR/",
+    "about": {
+      "enabled": true,
+      "body": {
+        "pt": "Ellysium é o design system criado para a Revon, marca que precisava de uma linguagem visual única, escalável e pronta para times de produto trabalharem sem fricção entre design e código.\n\nO projeto nasceu da necessidade de padronizar decisões visuais que antes viviam soltas: cores sem nome, tipografia sem hierarquia clara, componentes reconstruídos do zero a cada tela. Conduzi sozinho a construção de toda a fundação visual, do token à interface, com suporte nativo a tema claro e escuro desde a primeira decisão de cor.",
+        "en": "Ellysium is the design system built for Revon, a brand that needed a single, scalable visual language ready for product teams to work with no friction between design and code.\n\nThe project came from the need to standardize visual decisions that used to live scattered: unnamed colors, typography with no clear hierarchy, components rebuilt from scratch on every screen. I led the entire visual foundation solo, from token to interface, with native light and dark theme support built in from the very first color decision."
+      }
+    },
+    "foundations": {
+      "enabled": true,
+      "body": {
+        "pt": "A base do Ellysium é construída em tokens semânticos, nunca em valores soltos. Cada cor tem um par claro/escuro nativo através de data-theme, a tipografia combina Funnel Sans para títulos e Inter para corpo em 17 estilos responsivos, e um grid de 8 pontos garante espaçamento consistente em qualquer densidade de tela.",
+        "en": "Ellysium's foundation is built on semantic tokens, never raw values. Every color has a native light/dark pair through a data-theme attribute, typography pairs Funnel Sans for headings with Inter for body copy across 17 responsive styles, and an 8-point grid keeps spacing consistent at any screen density."
+      },
+      "images": [
+        {
+          "src": "/projects/ellysium/foundations-01.png",
+          "alt": {
+            "pt": "Cores semânticas do Ellysium",
+            "en": "Ellysium semantic colors"
+          }
+        },
+        {
+          "src": "/projects/ellysium/foundations-02.png",
+          "alt": {
+            "pt": "Sistema tipográfico",
+            "en": "Typography system"
+          }
+        },
+        {
+          "src": "/projects/ellysium/foundations-03.png",
+          "alt": {
+            "pt": "Grid de 8 pontos",
+            "en": "8-point grid system"
+          }
+        },
+        {
+          "src": "/projects/ellysium/foundations-04.png",
+          "alt": {
+            "pt": "Fundações visuais",
+            "en": "Visual foundations"
+          }
+        },
+        {
+          "src": "/projects/ellysium/foundations-05.png",
+          "alt": {
+            "pt": "Fundações visuais",
+            "en": "Visual foundations"
+          }
+        },
+        {
+          "src": "/projects/ellysium/foundations-06.png",
+          "alt": {
+            "pt": "Fundações visuais",
+            "en": "Visual foundations"
+          }
+        }
+      ]
+    },
+    "product": {
+      "enabled": true,
+      "body": {
+        "pt": "Um design system só é forte se sustenta a marca em qualquer superfície. Da identidade aplicada na fachada ao símbolo em fundo escuro e em produtos físicos, o Ellysium garante que a marca Revon mantenha peso, cor e proporção consistentes em qualquer contexto, digital ou físico.",
+        "en": "A design system only holds up if it sustains the brand on every surface. From the identity applied to signage to the symbol on dark backgrounds and physical products, Ellysium keeps the Revon mark consistent in weight, color and proportion across any context, digital or physical."
+      },
+      "images": [
+        {
+          "src": "/projects/ellysium/branding-01.png"
+        },
+        {
+          "src": "/projects/ellysium/branding-02.png"
+        },
+        {
+          "src": "/projects/ellysium/branding-03.png"
+        },
+        {
+          "src": "/projects/ellysium/branding-04.png"
+        },
+        {
+          "src": "/projects/ellysium/branding-05.png"
+        },
+        {
+          "src": "/projects/ellysium/branding-06.png"
+        },
+        {
+          "src": "/projects/ellysium/branding-07.png"
+        },
+        {
+          "src": "/projects/ellysium/branding-08.png"
+        }
+      ]
+    },
+    "research": {
+      "enabled": false,
+      "images": []
+    },
+    "designSystem": {
+      "enabled": true,
+      "body": {
+        "pt": "A biblioteca de componentes reúne mais de 70 ícones, botões primários e secundários com estados completos (hover, pressed, disabled), campos de busca, filtros e listas — tudo documentado para consumo direto no código via variáveis CSS.",
+        "en": "The component library brings together 70+ icons, primary and secondary buttons with full state coverage (hover, pressed, disabled), search fields, filters and lists, all documented for direct consumption in code through CSS variables."
+      },
+      "images": [
+        {
+          "src": "/projects/ellysium/design-system-01.png",
+          "alt": {
+            "pt": "Tokens de tipografia",
+            "en": "Typography tokens"
+          }
+        },
+        {
+          "src": "/projects/ellysium/design-system-02.png",
+          "alt": {
+            "pt": "Sistema de layout em grid",
+            "en": "UI layout grid system"
+          }
+        },
+        {
+          "src": "/projects/ellysium/design-system-03.png",
+          "alt": {
+            "pt": "Biblioteca de componentes de ação",
+            "en": "Action component library"
+          }
+        },
+        {
+          "src": "/projects/ellysium/design-system-04.png",
+          "alt": {
+            "pt": "Componentes do design system",
+            "en": "Design system components"
+          }
+        },
+        {
+          "src": "/projects/ellysium/design-system-05.png",
+          "alt": {
+            "pt": "Componentes do design system",
+            "en": "Design system components"
+          }
+        },
+        {
+          "src": "/projects/ellysium/design-system-06.png",
+          "alt": {
+            "pt": "Componentes do design system",
+            "en": "Design system components"
+          }
+        },
+        {
+          "src": "/projects/ellysium/design-system-07.png",
+          "alt": {
+            "pt": "Componentes do design system",
+            "en": "Design system components"
+          }
+        },
+        {
+          "src": "/projects/ellysium/design-system-08.png",
+          "alt": {
+            "pt": "Componentes do design system",
+            "en": "Design system components"
+          }
+        }
+      ]
+    },
+    "videos": {
+      "enabled": false,
+      "items": []
+    }
+  }
+}

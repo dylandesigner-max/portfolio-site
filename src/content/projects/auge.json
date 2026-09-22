@@ -1,0 +1,250 @@
+{
+  "slug": "auge",
+  "year": "2026",
+  "role": {
+    "pt": "Product Designer",
+    "en": "Product Designer"
+  },
+  "title": "Auge",
+  "tagline": {
+    "pt": "Plataforma de infoprodutos com área de membros white label, checkout de alta conversão e experiência de streaming.",
+    "en": "Infoproduct platform with a white-label member area, high-conversion checkout and a streaming-like experience."
+  },
+  "tags": [
+    "SaaS",
+    "EdTech",
+    "Design System"
+  ],
+  "image": "/projects/auge/capa.png",
+  "imageAlt": {
+    "pt": "Capa do projeto Auge",
+    "en": "Auge project cover"
+  },
+  "size": "lg",
+  "content": {
+    "cover": {
+      "src": "/projects/auge/capa.png",
+      "alt": {
+        "pt": "Capa do projeto Auge",
+        "en": "Auge project cover"
+      }
+    },
+    "backCover": {
+      "enabled": true,
+      "src": "/projects/auge/contra-capa.png",
+      "alt": {
+        "pt": "Contracapa do projeto Auge",
+        "en": "Auge project back cover"
+      }
+    },
+    "projectUrl": "https://augeoficial.com.br/institutional/index.html",
+    "about": {
+      "enabled": true,
+      "body": {
+        "pt": "Auge é uma plataforma de infoprodutos: produtores criam, editam e vendem seus produtos com fluxos ágeis e facilitados, enquanto alunos acessam e consomem seus cursos com uma experiência de streaming. A plataforma reúne área de membros white label, checkout de alta conversão, criador automático de landing pages, afiliados, co-produtores e muito mais.\n\nAtuo no time de Product Design conduzindo discoveries semanais: dinâmicas de pesquisa, co-criação e ideação com o time, comunicação de decisões de design para stakeholders e construção de protótipos navegáveis.",
+        "en": "Auge is an infoproduct platform: creators build, edit and sell their products through fast, streamlined flows, while students access and consume their courses through a streaming-like experience. The platform brings together a white-label member area, a high-conversion checkout, an automatic landing page builder, affiliates, co-producers and more.\n\nI work on the Product Design team running weekly discoveries: research dynamics, co-creation and ideation with the team, communicating design decisions to stakeholders, and building navigable prototypes."
+      }
+    },
+    "foundations": {
+      "enabled": true,
+      "body": {
+        "pt": "Paleta em tons de dourado sobre fundo escuro, a base da identidade Auge, com cores de apoio, tags de status e uma escala de cinzas dedicada à hierarquia de texto e elementos de interface.",
+        "en": "A palette in gold tones over a dark base, the core of the Auge identity, with supporting accent colors, status tags, and a dedicated grayscale for text hierarchy and UI elements."
+      },
+      "images": [
+        {
+          "src": "/projects/auge/foundations-01.png",
+          "alt": {
+            "pt": "Paleta de cores da UI",
+            "en": "UI color palette"
+          }
+        },
+        {
+          "src": "/projects/auge/foundations-02.png",
+          "alt": {
+            "pt": "Fundações visuais",
+            "en": "Visual foundations"
+          }
+        },
+        {
+          "src": "/projects/auge/foundations-03.png",
+          "alt": {
+            "pt": "Fundações visuais",
+            "en": "Visual foundations"
+          }
+        },
+        {
+          "src": "/projects/auge/foundations-04.png",
+          "alt": {
+            "pt": "Fundações visuais",
+            "en": "Visual foundations"
+          }
+        },
+        {
+          "src": "/projects/auge/foundations-05.png",
+          "alt": {
+            "pt": "Fundações visuais",
+            "en": "Visual foundations"
+          }
+        },
+        {
+          "src": "/projects/auge/foundations-06.png",
+          "alt": {
+            "pt": "Fundações visuais",
+            "en": "Visual foundations"
+          }
+        }
+      ]
+    },
+    "product": {
+      "enabled": true,
+      "body": {
+        "pt": "Do login ao acompanhamento da jornada: página de vendas do infoproduto, player de aula com ferramentas de IA, painel de compras, gamificação por sequência e ranking, além da experiência mobile completa para alunos e produtores.",
+        "en": "From login to journey tracking: the infoproduct sales page, a lesson player with AI tools, a purchases dashboard, streak and ranking gamification, plus the full mobile experience for students and producers."
+      },
+      "images": [
+        {
+          "src": "/projects/auge/produto-01.png",
+          "alt": {
+            "pt": "Tela de login",
+            "en": "Login screen"
+          }
+        },
+        {
+          "src": "/projects/auge/produto-02.png",
+          "alt": {
+            "pt": "Painel inicial, minhas compras",
+            "en": "Home dashboard, my purchases"
+          }
+        },
+        {
+          "src": "/projects/auge/produto-03.png",
+          "alt": {
+            "pt": "Player de aula com IA",
+            "en": "Lesson player with AI tools"
+          }
+        },
+        {
+          "src": "/projects/auge/produto-04.png",
+          "alt": {
+            "pt": "Página de vendas do infoproduto",
+            "en": "Infoproduct sales page"
+          }
+        },
+        {
+          "src": "/projects/auge/produto-05.png",
+          "alt": {
+            "pt": "Gamificação, minha jornada",
+            "en": "Gamification, my journey"
+          }
+        },
+        {
+          "src": "/projects/auge/produto-06.png",
+          "alt": {
+            "pt": "Área de membros, mobile",
+            "en": "Member area, mobile"
+          }
+        },
+        {
+          "src": "/projects/auge/produto-07.png",
+          "alt": {
+            "pt": "Produtos do produtor, mobile",
+            "en": "Producer's products, mobile"
+          }
+        },
+        {
+          "src": "/projects/auge/produto-08.png",
+          "alt": {
+            "pt": "Dashboard financeiro, mobile",
+            "en": "Financial dashboard, mobile"
+          }
+        },
+        {
+          "src": "/projects/auge/produto-09.png",
+          "alt": {
+            "pt": "Mockup de apresentação, minhas compras",
+            "en": "Presentation mockup, my purchases"
+          }
+        }
+      ]
+    },
+    "research": {
+      "enabled": true,
+      "body": {
+        "pt": "Discoveries semanais conduzidas com o time: desk research de concorrentes do mercado de infoprodutos e mapas de empatia para entender comportamento, dores e necessidades de produtores e alunos. As imagens abaixo estão em baixa resolução de propósito, para preservar informações sensíveis do produto.",
+        "en": "Weekly discoveries run with the team: competitive desk research on the infoproduct market and empathy maps to understand producer and student behavior, pains and needs. The images below are intentionally low-resolution to protect sensitive product findings."
+      },
+      "images": [
+        {
+          "src": "/projects/auge/pesquisa-01.jpg",
+          "alt": {
+            "pt": "Desk research de concorrentes",
+            "en": "Competitive desk research"
+          }
+        },
+        {
+          "src": "/projects/auge/pesquisa-02.jpg",
+          "alt": {
+            "pt": "Mapas de empatia",
+            "en": "Empathy maps"
+          }
+        }
+      ]
+    },
+    "designSystem": {
+      "enabled": true,
+      "body": {
+        "pt": "Sistema de componentes documentado por página: botões (ação, IA, switch, busca, seletores), barras de progresso em múltiplos formatos e os demais elementos que sustentam tanto o painel do produtor quanto a área de membros.",
+        "en": "A component system documented page by page: buttons (action, AI, switch, search, selectors), progress bars in multiple formats, and the remaining elements that power both the producer dashboard and the member area."
+      },
+      "images": [
+        {
+          "src": "/projects/auge/design-system-01.png",
+          "alt": {
+            "pt": "Capa do design system",
+            "en": "Design system cover"
+          }
+        },
+        {
+          "src": "/projects/auge/design-system-02.png",
+          "alt": {
+            "pt": "Botões",
+            "en": "Buttons"
+          }
+        },
+        {
+          "src": "/projects/auge/design-system-03.png",
+          "alt": {
+            "pt": "Barras de progresso",
+            "en": "Progress bars"
+          }
+        }
+      ]
+    },
+    "videos": {
+      "enabled": true,
+      "body": {
+        "pt": "Reveal da marca em vídeo e a animação de carregamento usada na plataforma: dois pequenos momentos de motion que reforçam a identidade Auge em uso.",
+        "en": "The brand's video reveal and the platform's loading animation: two small motion moments that reinforce the Auge identity in use."
+      },
+      "items": [
+        {
+          "src": "/projects/auge/logo-reveal.mp4",
+          "type": "video",
+          "alt": {
+            "pt": "Reveal da marca Auge",
+            "en": "Auge brand reveal"
+          }
+        },
+        {
+          "src": "/projects/auge/loading.gif",
+          "type": "gif",
+          "alt": {
+            "pt": "Animação de carregamento",
+            "en": "Loading animation"
+          }
+        }
+      ]
+    }
+  }
+}

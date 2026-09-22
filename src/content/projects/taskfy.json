@@ -1,0 +1,173 @@
+{
+  "slug": "taskfy",
+  "year": "2025",
+  "role": {
+    "pt": "UX/UI Designer",
+    "en": "UX/UI Designer"
+  },
+  "title": "Taskfy",
+  "tagline": {
+    "pt": "App mobile de gestão de tarefas para times pequenos.",
+    "en": "Mobile task management app for small teams."
+  },
+  "tags": [
+    "Mobile",
+    "App Design"
+  ],
+  "image": "/projects/taskfy/capa.png",
+  "imageAlt": {
+    "pt": "Mockup de capa do aplicativo Taskfy",
+    "en": "Taskfy app cover mockup"
+  },
+  "size": "md",
+  "content": {
+    "cover": {
+      "src": "/projects/taskfy/capa.png",
+      "alt": {
+        "pt": "Capa do projeto Taskfy",
+        "en": "Taskfy project cover"
+      }
+    },
+    "backCover": {
+      "enabled": false,
+      "src": "",
+      "alt": {
+        "pt": "",
+        "en": ""
+      }
+    },
+    "about": {
+      "enabled": true,
+      "body": {
+        "pt": "Taskfy é um app mobile de gestão de tarefas pensado para times pequenos que precisam organizar o dia a dia sem a complexidade de ferramentas corporativas.\n\nO processo passou por pesquisa, mapeamento de persona e fluxo, exploração de identidade visual e prototipação de alta fidelidade, finalizando com teste de usuário.",
+        "en": "Taskfy is a mobile task-management app designed for small teams that need to organize their day without the overhead of enterprise tools.\n\nThe process covered research, persona and flow mapping, visual identity exploration and high-fidelity prototyping, wrapping up with user testing."
+      }
+    },
+    "foundations": {
+      "enabled": true,
+      "body": {
+        "pt": "Paleta de cores e sistema tipográfico construídos para transmitir organização e leveza no dia a dia de times pequenos.",
+        "en": "Color palette and typography system built to feel organized and light for small teams' everyday use."
+      },
+      "images": [
+        {
+          "src": "/projects/taskfy/cores.png",
+          "alt": {
+            "pt": "Paleta de cores",
+            "en": "Color palette"
+          }
+        },
+        {
+          "src": "/projects/taskfy/tipografia.png",
+          "alt": {
+            "pt": "Sistema tipográfico",
+            "en": "Typography system"
+          }
+        }
+      ]
+    },
+    "product": {
+      "enabled": true,
+      "body": {
+        "pt": "Da wireframe à interface final: telas de alta fidelidade e mockups de apresentação do fluxo principal do app.",
+        "en": "From wireframe to final interface: high-fidelity screens and presentation mockups of the app's core flow."
+      },
+      "images": [
+        {
+          "src": "/projects/taskfy/telas-1.png",
+          "alt": {
+            "pt": "Telas de alta fidelidade",
+            "en": "High-fidelity screens"
+          }
+        },
+        {
+          "src": "/projects/taskfy/telas-2.png",
+          "alt": {
+            "pt": "Mais telas do fluxo principal",
+            "en": "More screens from the core flow"
+          }
+        },
+        {
+          "src": "/projects/taskfy/mockup-1.png",
+          "alt": {
+            "pt": "Mockup de apresentação",
+            "en": "Presentation mockup"
+          }
+        },
+        {
+          "src": "/projects/taskfy/mockup-2.png",
+          "alt": {
+            "pt": "Mockup de apresentação",
+            "en": "Presentation mockup"
+          }
+        }
+      ]
+    },
+    "research": {
+      "enabled": true,
+      "body": {
+        "pt": "Discovery a partir do problema real de organização em times pequenos: persona, processo, etapas do fluxo e validação com teste de usuário.",
+        "en": "Discovery grounded in the real organization problem for small teams: persona, process, flow steps and validation through user testing."
+      },
+      "images": [
+        {
+          "src": "/projects/taskfy/problema.png",
+          "alt": {
+            "pt": "Definição do problema",
+            "en": "Problem definition"
+          }
+        },
+        {
+          "src": "/projects/taskfy/persona.png",
+          "alt": {
+            "pt": "Persona e contexto de uso",
+            "en": "Persona and usage context"
+          }
+        },
+        {
+          "src": "/projects/taskfy/processo.png",
+          "alt": {
+            "pt": "Processo de design",
+            "en": "Design process"
+          }
+        },
+        {
+          "src": "/projects/taskfy/etapas.png",
+          "alt": {
+            "pt": "Etapas do fluxo",
+            "en": "Flow steps"
+          }
+        },
+        {
+          "src": "/projects/taskfy/user-flow.png",
+          "alt": {
+            "pt": "User flow completo",
+            "en": "Full user flow"
+          }
+        },
+        {
+          "src": "/projects/taskfy/user-test.png",
+          "alt": {
+            "pt": "Teste de usabilidade",
+            "en": "Usability testing"
+          }
+        },
+        {
+          "src": "/projects/taskfy/aprendizado.png",
+          "alt": {
+            "pt": "Aprendizados",
+            "en": "Learnings"
+          }
+        }
+      ]
+    },
+    "designSystem": {
+      "enabled": false,
+      "images": []
+    },
+    "videos": {
+      "enabled": false,
+      "items": []
+    }
+  }
+}
