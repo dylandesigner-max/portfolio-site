@@ -1,72 +1,116 @@
 "use client";
 
-import Link from "next/link";
-import { motion, useReducedMotion } from "motion/react";
-import { IconArrowUpRight } from "@tabler/icons-react";
+import Image from "next/image";
+import { motion, useReducedMotion } from "framer-motion";
 import { useLocale } from "@/lib/i18n/context";
 import { Container } from "@/components/ui/container";
+import { Button } from "@/components/ui/button";
+import { InteractiveGrid } from "./interactive-grid";
+
+const wordVariants = {
+  hidden: { opacity: 0, y: "100%" },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7, delay: 0.25 + i * 0.045, ease: [0.16, 1, 0.3, 1] as const },
+  }),
+};
+
+function Words({
+  text,
+  startIndex,
+  reduce,
+  className,
+}: {
+  text: string;
+  startIndex: number;
+  reduce: boolean;
+  className?: string;
+}) {
+  return (
+    <>
+      {text.split(" ").map((word, i) => (
+        <span key={`${word}-${i}`} className="inline-block overflow-hidden pb-[0.14em] align-bottom">
+          <motion.span
+            className={`inline-block ${className ?? ""}`}
+            custom={startIndex + i}
+            initial={reduce ? false : "hidden"}
+            animate="visible"
+            variants={wordVariants}
+          >
+            {word}&nbsp;
+          </motion.span>
+        </span>
+      ))}
+    </>
+  );
+}
 
 export function Hero() {
   const { t } = useLocale();
-  const reduce = useReducedMotion();
+  const reduce = !!useReducedMotion();
+  const introWords = t.hero.titleA.split(" ").length;
 
   return (
     <section
       id="top"
-      className="hero-gradient relative isolate flex min-h-[100dvh] flex-col justify-center overflow-hidden pt-16"
+      className="relative isolate flex min-h-[100dvh] flex-col overflow-hidden pt-24"
     >
-      <Container className="py-16 md:py-24">
-        <motion.p
-          initial={reduce ? false : { opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-6 text-xs font-semibold uppercase tracking-[0.16em] text-white/50"
-        >
-          {t.hero.eyebrow}
-        </motion.p>
+      <InteractiveGrid />
 
-        <motion.h1
-          initial={reduce ? false : { opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.08, ease: [0.16, 1, 0.3, 1] }}
-          className="hero-glow-text max-w-4xl text-[3rem] font-semibold leading-[1.02] tracking-tighter text-balance sm:text-7xl md:text-8xl lg:text-9xl"
-        >
-          {t.hero.headlineA}{" "}
-          <span className="italic leading-[1.1] pb-1 inline-block">
-            {t.hero.headlineEmphasis}
-          </span>
-          .
-        </motion.h1>
-
-        <motion.p
-          initial={reduce ? false : { opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-8 max-w-[42ch] text-base leading-relaxed text-white/65 md:text-lg"
-        >
-          {t.hero.subtext}
-        </motion.p>
-
-        <motion.div
-          initial={reduce ? false : { opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-10 flex flex-wrap items-center gap-4"
-        >
-          <Link
-            href="/projects"
-            className="inline-flex items-center gap-1.5 rounded-pill bg-white px-6 py-3.5 text-sm font-semibold text-ink transition-transform hover:-translate-y-px active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+      <Container className="relative z-10 flex flex-1 flex-col justify-between pb-12 md:pb-16">
+        <div>
+          <motion.div
+            initial={reduce ? false : { opacity: 0, y: 16, scale: 0.96 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+            className="relative mb-6 aspect-square w-20 overflow-hidden rounded-card border border-line bg-bg-raised md:mb-8 md:w-24"
           >
-            {t.hero.ctaPrimary}
-            <IconArrowUpRight size={16} strokeWidth={2} aria-hidden="true" />
-          </Link>
-          <Link
-            href="/about#contact"
-            className="inline-flex items-center gap-1.5 rounded-pill border border-white/25 px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:border-white/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+            <Image
+              src="/dylan/dylan-hero.webp"
+              alt="Dylan Xavier"
+              fill
+              priority
+              sizes="96px"
+              className="object-cover object-top"
+            />
+          </motion.div>
+
+          <h1 className="max-w-4xl font-display text-3xl font-medium leading-[1.1] tracking-tight text-ink sm:text-4xl md:text-5xl">
+            <Words text={t.hero.titleA} startIndex={0} reduce={reduce} />
+            <Words
+              text={t.hero.titleEmphasis}
+              startIndex={introWords}
+              reduce={reduce}
+              className="italic text-accent"
+            />
+          </h1>
+        </div>
+
+        <div className="mt-12 flex flex-col items-start justify-between gap-8 md:flex-row md:items-end">
+          <motion.p
+            initial={reduce ? false : { opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            className="max-w-[38ch] text-base leading-relaxed text-ink-soft md:text-lg"
           >
-            {t.hero.ctaSecondary}
-          </Link>
-        </motion.div>
+            {t.hero.subtext}
+          </motion.p>
+
+          <motion.div
+            initial={reduce ? false : { opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.9, ease: [0.16, 1, 0.3, 1] }}
+            className="flex flex-wrap items-center gap-4"
+          >
+            <Button href="/projects" variant="primary">
+              {t.hero.ctaPrimary}
+            </Button>
+            <Button href="/about#contact" variant="outline">
+              {t.hero.ctaSecondary}
+            </Button>
+          </motion.div>
+        </div>
       </Container>
     </section>
   );

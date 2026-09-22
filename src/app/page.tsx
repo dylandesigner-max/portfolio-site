@@ -1,9 +1,9 @@
 import { Hero } from "@/components/home/hero";
-import { Stats } from "@/components/home/stats";
 import { AboutTeaser } from "@/components/home/about-teaser";
-import { Services } from "@/components/home/services";
-import { Process } from "@/components/home/process";
-import { ProjectsPreview } from "@/components/home/projects-preview";
+import { FeaturesBento } from "@/components/home/features-bento";
+import { ProjectsShowcase } from "@/components/home/projects-showcase";
+import { TestimonialsCarousel } from "@/components/home/testimonials-carousel";
+import { SocialCards } from "@/components/home/social-cards";
 import { SkillsMarquee } from "@/components/home/skills-marquee";
 import { ContactCta } from "@/components/home/contact-cta";
 
@@ -11,11 +11,12 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <Stats />
       <AboutTeaser />
-      <Services />
-      <Process />
-      <ProjectsPreview />
+      <SkillsMarquee />
+      <FeaturesBento />
+      <ProjectsShowcase />
+      <TestimonialsCarousel />
+      <SocialCards />
       <SkillsMarquee />
       <ContactCta />
     </>

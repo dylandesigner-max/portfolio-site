@@ -3,25 +3,10 @@
 import { useEffect, useMemo, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useReducedMotion } from "motion/react";
-import { clsx } from "clsx";
+import { useReducedMotion } from "framer-motion";
+import { cn } from "@/lib/utils";
 
 gsap.registerPlugin(ScrollTrigger);
-
-type Word = { text: string; bold: boolean };
-
-function parseWords(source: string): Word[] {
-  const segments = source.split("**");
-  const words: Word[] = [];
-  segments.forEach((segment, i) => {
-    const bold = i % 2 === 1;
-    segment
-      .split(" ")
-      .filter(Boolean)
-      .forEach((w) => words.push({ text: w, bold }));
-  });
-  return words;
-}
 
 export function ScrollTextReveal({
   text,
@@ -32,7 +17,7 @@ export function ScrollTextReveal({
 }) {
   const ref = useRef<HTMLParagraphElement>(null);
   const reduce = useReducedMotion();
-  const words = useMemo(() => parseWords(text), [text]);
+  const words = useMemo(() => text.split(" ").filter(Boolean), [text]);
 
   useEffect(() => {
     if (reduce || !ref.current) return;
@@ -41,15 +26,15 @@ export function ScrollTextReveal({
       const spans = ref.current!.querySelectorAll("[data-word]");
       gsap.fromTo(
         spans,
-        { opacity: 0.22 },
+        { opacity: 0.2 },
         {
           opacity: 1,
-          stagger: 0.025,
+          stagger: 0.02,
           ease: "none",
           scrollTrigger: {
             trigger: ref.current,
-            start: "top 85%",
-            end: "bottom 60%",
+            start: "top 88%",
+            end: "bottom 55%",
             scrub: true,
           },
         },
@@ -70,18 +55,15 @@ export function ScrollTextReveal({
   }, [reduce]);
 
   return (
-    <p ref={ref} className={clsx(className)}>
+    <p ref={ref} className={cn(className)}>
       {words.map((word, i) => (
         <span
           key={i}
           data-word
-          className={clsx(
-            "mr-[0.28em] inline-block",
-            word.bold ? "font-semibold text-ink" : undefined,
-          )}
-          style={reduce ? undefined : { opacity: 0.22 }}
+          className="mr-[0.28em] inline-block"
+          style={reduce ? undefined : { opacity: 0.2 }}
         >
-          {word.text}
+          {word}
         </span>
       ))}
     </p>

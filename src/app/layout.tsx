@@ -1,18 +1,26 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
+import { Rethink_Sans, Syne } from "next/font/google";
 import { cookies } from "next/headers";
 import "./globals.css";
 import { ThemeProvider } from "@/components/providers/theme-provider";
+import { PageTransition } from "@/components/providers/page-transition";
 import { LocaleProvider } from "@/lib/i18n/context";
 import type { Locale } from "@/lib/i18n/dictionaries";
 import { Navbar } from "@/components/nav/navbar";
 import { Footer } from "@/components/footer/footer";
 import { CustomCursor } from "@/components/ui/custom-cursor";
+import { SmoothScrollProvider } from "@/lib/smooth-scroll";
 import { cn } from "@/lib/utils";
 
-const jakarta = Plus_Jakarta_Sans({
-  variable: "--font-sans",
+const archivo = Rethink_Sans({
   subsets: ["latin"],
+  adjustFontFallback: false,
+  variable: "--font-sans",
+});
+
+const spaceGrotesk = Syne({
+  subsets: ["latin"],
+  variable: "--font-display",
 });
 
 export const metadata: Metadata = {
@@ -32,21 +40,21 @@ export default async function RootLayout({
   return (
     <html
       lang={locale}
-      className={cn("h-full", "antialiased", jakarta.variable, "font-sans")}
+      className={cn("h-full antialiased", archivo.variable, spaceGrotesk.variable)}
       suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col bg-bg text-ink">
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
+      <body className="min-h-full flex flex-col bg-bg text-ink font-sans">
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <LocaleProvider initialLocale={locale}>
-            <CustomCursor />
-            <Navbar />
-            <main className="flex-1">{children}</main>
-            <Footer />
+            <SmoothScrollProvider>
+              <div className="grain-overlay" aria-hidden="true" />
+              <CustomCursor />
+              <Navbar />
+              <main className="flex-1">
+                <PageTransition>{children}</PageTransition>
+              </main>
+              <Footer />
+            </SmoothScrollProvider>
           </LocaleProvider>
         </ThemeProvider>
       </body>

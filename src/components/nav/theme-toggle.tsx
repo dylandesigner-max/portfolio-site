@@ -2,8 +2,8 @@
 
 import { useSyncExternalStore } from "react";
 import { useTheme } from "next-themes";
-import { IconMoon, IconSun } from "@tabler/icons-react";
-import { clsx } from "clsx";
+import { Moon, Sun } from "@phosphor-icons/react/dist/ssr";
+import { cn } from "@/lib/utils";
 
 const emptySubscribe = () => () => {};
 
@@ -15,10 +15,9 @@ function useMounted() {
   );
 }
 
-export function ThemeToggle({ transparent = false }: { transparent?: boolean }) {
+export function ThemeToggle({ className }: { className?: string }) {
   const { resolvedTheme, setTheme } = useTheme();
   const mounted = useMounted();
-
   const isDark = mounted && resolvedTheme === "dark";
 
   return (
@@ -26,21 +25,19 @@ export function ThemeToggle({ transparent = false }: { transparent?: boolean }) 
       type="button"
       onClick={() => setTheme(isDark ? "light" : "dark")}
       aria-label={isDark ? "Ativar modo claro" : "Ativar modo escuro"}
-      className={clsx(
-        "flex h-9 w-9 items-center justify-center rounded-full border transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand",
-        transparent
-          ? "border-white/30 text-white hover:border-white"
-          : "border-line text-ink hover:border-ink",
+      className={cn(
+        "flex h-9 w-9 items-center justify-center rounded-full border border-line text-ink transition-colors hover:border-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent",
+        className,
       )}
     >
       {mounted ? (
         isDark ? (
-          <IconSun size={17} strokeWidth={1.75} aria-hidden="true" />
+          <Sun size={16} weight="bold" aria-hidden="true" />
         ) : (
-          <IconMoon size={17} strokeWidth={1.75} aria-hidden="true" />
+          <Moon size={16} weight="bold" aria-hidden="true" />
         )
       ) : (
-        <span className="block h-[17px] w-[17px]" />
+        <span className="block h-4 w-4" />
       )}
     </button>
   );
