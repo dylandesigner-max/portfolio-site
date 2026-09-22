@@ -4,6 +4,7 @@ import {
   createContext,
   useCallback,
   useContext,
+  useEffect,
   useMemo,
   useState,
 } from "react";
@@ -29,9 +30,23 @@ export function LocaleProvider({
 }) {
   const [locale, setLocaleState] = useState<Locale>(initialLocale);
 
+  // Static export always renders `initialLocale` server-side (no cookie
+  // access without a server) — pick up a returning visitor's saved
+  // preference here instead. Only swaps content when it actually differs,
+  // so first-time visitors (the common case) never see a flash.
+  useEffect(() => {
+    const match = document.cookie.match(/(?:^|; )locale=(pt|en)/);
+    const saved = match?.[1] as Locale | undefined;
+    if (saved && saved !== initialLocale) {
+      setLocaleState(saved);
+      document.documentElement.lang = saved;
+    }
+  }, [initialLocale]);
+
   const setLocale = useCallback((next: Locale) => {
     setLocaleState(next);
     if (typeof document !== "undefined") {
+      document.documentElement.lang = next;
       document.cookie = `${COOKIE_NAME}=${next}; path=/; max-age=${COOKIE_MAX_AGE}; SameSite=Lax`;
     }
   }, []);

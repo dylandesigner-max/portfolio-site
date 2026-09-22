@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
 import { Rethink_Sans, Syne } from "next/font/google";
-import { cookies } from "next/headers";
 import "./globals.css";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { PageTransition } from "@/components/providers/page-transition";
 import { LocaleProvider } from "@/lib/i18n/context";
-import type { Locale } from "@/lib/i18n/dictionaries";
 import { Navbar } from "@/components/nav/navbar";
 import { Footer } from "@/components/footer/footer";
 import { CustomCursor } from "@/components/ui/custom-cursor";
@@ -30,13 +28,15 @@ export const metadata: Metadata = {
     "Product Designer em Curitiba focado em UX/UI para SaaS e mobile. Pesquisa, prototipação e interfaces testadas com usuários reais.",
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const cookieStore = await cookies();
-  const locale = (cookieStore.get("locale")?.value as Locale) ?? "pt";
+  // Static export has no server to read a locale cookie on, so every request
+  // renders in Portuguese by default; LocaleProvider picks up a saved
+  // preference client-side on mount (see its own comment for the tradeoff).
+  const locale = "pt" as const;
 
   return (
     <html
