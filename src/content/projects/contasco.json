@@ -15,7 +15,7 @@
     "B2B",
     "Design System"
   ],
-  "image": "/projects/contasco/detalhes-cliente.png",
+  "image": "/projects/contasco/capa-contasco-sfw65.png",
   "imageAlt": {
     "pt": "Tela de Detalhes do Cliente do ContasCo",
     "en": "ContasCo client details screen"
@@ -23,15 +23,15 @@
   "size": "lg",
   "content": {
     "cover": {
-      "src": "/projects/contasco/detalhes-cliente.png",
+      "src": "/projects/contasco/contracapa-contasco-3cv8q.png",
       "alt": {
         "pt": "Tela de Detalhes do Cliente do ContasCo",
         "en": "ContasCo client details screen"
       }
     },
     "backCover": {
-      "enabled": false,
-      "src": "",
+      "enabled": true,
+      "src": "/projects/contasco/capa-contasco-4aovn.png",
       "alt": {
         "pt": "",
         "en": ""
@@ -41,13 +41,33 @@
     "about": {
       "enabled": true,
       "body": {
-        "pt": "Account Managers de agências e times de marketing vivem entre abas: CRM, planilhas de contrato, analytics e ferramentas de tarefas para entender a saúde real de cada cliente.\n\nO ContasCo centraliza a gestão de clientes e projetos em um único painel, dando visão 360º de cada conta (saúde, métricas, histórico e contratos) sem sair de uma única tela. Conduzi sozinho todo o processo em duas semanas: pesquisa, definição, ideação, prototipação, UI, design system e teste de usabilidade.",
-        "en": "Account Managers at agencies and marketing teams live between tabs: CRM, contract spreadsheets, analytics and task tools just to understand the real health of each client.\n\nContasCo centralizes client and project management in a single dashboard, giving a 360° view of each account (health, metrics, history and contracts) without leaving one screen. I ran the entire process solo over two weeks: research, definition, ideation, prototyping, UI, design system and usability testing."
+        "pt": "Account Managers de agências e times de marketing vivem entre abas: CRM, planilhas de contrato, analytics e ferramentas de tarefas para entender a saúde real de cada cliente.\n\nO ContasCo centraliza a gestão de clientes e projetos em um único painel, dando visão 360º de cada conta (saúde, métricas, histórico e contratos) sem sair de uma única tela. Conduzi sozinho todo o processo em duas semanas: pesquisa, definição, ideação, prototipação, UI, design system e teste de usabilidade.\n\nConfira um dos testes de usabilidade completo no link \"ver projeto\"",
+        "en": "Account Managers at agencies and marketing teams live between tabs: CRM, contract spreadsheets, analytics and task tools just to understand the real health of each client.\n\nContasCo centralizes client and project management in a single dashboard, giving a 360° view of each account (health, metrics, history and contracts) without leaving one screen. I ran the entire process solo over two weeks: research, definition, ideation, prototyping, UI, design system and usability testing.\n\nCheck out one of the full usability tests at the 'view project' link"
       }
     },
     "foundations": {
-      "enabled": false,
-      "images": []
+      "enabled": true,
+      "images": [
+        {
+          "src": "/projects/contasco/foundations01-contasco-f7dp0.png"
+        },
+        {
+          "src": "/projects/contasco/foundations02-contasco-ryhpd.png"
+        },
+        {
+          "src": "/projects/contasco/foundations03-contasco-jxa5x.png"
+        },
+        {
+          "src": "/projects/contasco/foundations04-contasco-0ndqy.png"
+        },
+        {
+          "src": "/projects/contasco/foundations05-contasco-642v5.png"
+        }
+      ],
+      "body": {
+        "pt": "Para o projeto da interface foram desenvolvidos foundations que complementam o styleguide de um futuro design system. A prévia de tokens inclui: cores light mode, tipografia semântica, Grid System e tendo Lucide Icons como Icon Library. ",
+        "en": "For the interface project, foundations were developed that complement the style guide of a future design system. The preview of tokens includes: light mode colors, semantic typography, Grid System, and using Lucide Icons as the Icon Library."
+      }
     },
     "product": {
       "enabled": true,
@@ -57,27 +77,33 @@
       },
       "images": [
         {
-          "src": "/projects/contasco/detalhes-cliente.png",
-          "alt": {
-            "pt": "Tela de Detalhes do Cliente",
-            "en": "Client Details screen"
-          }
-        },
-        {
-          "src": "/projects/contasco/prototipacao.png",
-          "alt": {
-            "pt": "Progressão da prototipação",
-            "en": "Prototyping progression"
-          }
+          "src": "/projects/contasco/poduto01-contasco-rfvxg.png"
         }
       ]
     },
     "research": {
-      "enabled": false,
-      "images": []
+      "enabled": true,
+      "images": [
+        {
+          "src": "/projects/contasco/pesquisa01-contasco-s56zx.png"
+        },
+        {
+          "src": "/projects/contasco/pesquisa02-contasco-eyv1i.png"
+        },
+        {
+          "src": "/projects/contasco/pesquisa03-contasco-0kbmk.png"
+        },
+        {
+          "src": "/projects/contasco/pesquisa04-contasco-fkfxg.png"
+        }
+      ],
+      "body": {
+        "pt": "Para o desenvolvimento dessa tela, conduzi um discovery seguindo a metodologia \"Design Thinking\" combinando uma série de técnicas de de pesquisa qualitativa e quantitativa, além de uma fase dedicada para Testes de usabilidade.",
+        "en": ""
+      }
     },
     "designSystem": {
-      "enabled": true,
+      "enabled": false,
       "body": {
         "pt": "Um design system pensado para crescer com consistência: cor, tipografia, grid e ícones documentados para escalar com o produto.",
         "en": "A design system built to scale with consistency: color, typography, grid and icons, all documented to grow with the product."
@@ -95,6 +121,7 @@
     "videos": {
       "enabled": false,
       "items": []
-    }
+    },
+    "projectUrl": "https://app.notion.com/p/Pesquisa-de-UX-309ad59f522d8080a3c1fb3793394a06?source=copy_link"
   }
 }
