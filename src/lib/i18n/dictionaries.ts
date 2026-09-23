@@ -85,9 +85,8 @@ export const dictionaries = {
       intro: "Sou Dylan Xavier, designer de produto em Curitiba. Nos últimos 7 anos, ajudei times a transformar problemas confusos em interfaces claras, testadas com quem realmente ia usá-las.",
       bioTitle: "Trajetória",
       bio: [
-        "Comecei como designer gráfico, o que me deu uma base sólida de tipografia, hierarquia visual e composição.",
-        "Migrei para UX/UI ao perceber que o design mais bonito do mundo não vale nada se não resolve o problema certo.",
-        "Hoje trabalho com produtos SaaS B2B e aplicativos mobile, transformando fluxos complexos em experiências claras.",
+        "Sou especialista em product design com foco em SaaS. Já atuei em diversos projetos de diferentes nichos, construindo sistemas, design systems, plataformas e mobile apps.",
+        "Sou aficionado por tecnologia e levo como missão criar interfaces com o máximo de usabilidade e impacto visual, transformando completamente o visual dos projetos em que atuo.",
       ],
       valuesTitle: "Como penso design",
       values: [
@@ -95,7 +94,7 @@ export const dictionaries = {
         { title: "Simplicidade é trabalho", body: "Uma tela simples passou por várias versões complicadas." },
         { title: "Testar cedo, sempre", body: "Prefiro errar num rabisco do que num produto em produção." },
       ],
-      toolsTitle: "Stack",
+      toolsTitle: "Minha Stack de ferramentas",
       contactTitle: "Vamos conversar",
       contactBody: "Respondo rápido por e-mail ou WhatsApp.",
       emailLabel: "E-mail",
@@ -201,9 +200,8 @@ export const dictionaries = {
       intro: "I'm Dylan Xavier, a product designer based in Curitiba. Over the past 7 years I've helped teams turn confusing problems into clear interfaces, tested with the people who'd actually use them.",
       bioTitle: "Background",
       bio: [
-        "I started as a graphic designer, which gave me a solid foundation in typography, visual hierarchy and composition.",
-        "I moved into UX/UI once I realized the most beautiful design in the world is worthless if it solves the wrong problem.",
-        "Today I work with B2B SaaS products and mobile apps, turning complex flows into clear experiences.",
+        "I specialize in product design with a focus on SaaS. I've worked across projects in different niches, building systems, design systems, platforms and mobile apps.",
+        "I'm a technology enthusiast, and I see it as my mission to craft interfaces with maximum usability and visual impact, completely transforming the look of every project I take on.",
       ],
       valuesTitle: "How I think about design",
       values: [
@@ -211,7 +209,7 @@ export const dictionaries = {
         { title: "Simplicity is work", body: "A simple screen went through several complicated versions." },
         { title: "Test early, always", body: "I'd rather be wrong on a sketch than in production." },
       ],
-      toolsTitle: "Stack",
+      toolsTitle: "My tools stack",
       contactTitle: "Let's talk",
       contactBody: "I reply quickly by email or WhatsApp.",
       emailLabel: "Email",
