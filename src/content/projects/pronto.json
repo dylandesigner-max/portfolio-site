@@ -30,8 +30,8 @@
       }
     },
     "backCover": {
-      "enabled": false,
-      "src": "",
+      "enabled": true,
+      "src": "/projects/pronto/contracapa2-pronto-h12hv.png",
       "alt": {
         "pt": "",
         "en": ""
