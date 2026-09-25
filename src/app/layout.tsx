@@ -10,6 +10,7 @@ import { CustomCursor } from "@/components/ui/custom-cursor";
 import { SmoothScrollProvider } from "@/lib/smooth-scroll";
 import { RouteTransitionProvider } from "@/components/providers/route-transition";
 import { cn } from "@/lib/utils";
+import { SITE_URL } from "@/lib/site";
 
 const archivo = Rethink_Sans({
   subsets: ["latin"],
@@ -23,9 +24,20 @@ const spaceGrotesk = Syne({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "Dylan Xavier — Product & UX/UI Designer",
   description:
     "Product Designer em Curitiba focado em UX/UI para SaaS e mobile. Pesquisa, prototipação e interfaces testadas com usuários reais.",
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    url: SITE_URL,
+    siteName: "Dylan Xavier",
+    title: "Dylan Xavier — Product & UX/UI Designer",
+    description:
+      "Product Designer em Curitiba focado em UX/UI para SaaS e mobile. Pesquisa, prototipação e interfaces testadas com usuários reais.",
+    locale: "pt_BR",
+  },
 };
 
 export default function RootLayout({
