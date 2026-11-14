@@ -6,7 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { X } from "@phosphor-icons/react/dist/ssr";
 import { useLenis } from "@/lib/smooth-scroll";
 import { useLocale } from "@/lib/i18n/context";
-import type { MediaItem } from "@/lib/projects-data";
+import type { MediaItem } from "@/lib/project-types";
 
 // Same lightbox pattern as ImageGallery (portal to <body>, keyboard/swipe
 // navigation) but the content is centered instead of a scrollable column,

@@ -36,12 +36,122 @@
         "en": ""
       }
     },
+    "accentColor": "#00E0B8",
     "about": {
       "enabled": true,
       "body": {
         "pt": "Taskfy é um app mobile de gestão de tarefas pensado para times pequenos que precisam organizar o dia a dia sem a complexidade de ferramentas corporativas.\n\nO processo passou por pesquisa, mapeamento de persona e fluxo, exploração de identidade visual e prototipação de alta fidelidade, finalizando com teste de usuário.",
         "en": "Taskfy is a mobile task-management app designed for small teams that need to organize their day without the overhead of enterprise tools.\n\nThe process covered research, persona and flow mapping, visual identity exploration and high-fidelity prototyping, wrapping up with user testing."
       }
+    },
+    "facts": {
+      "enabled": true,
+      "duration": {
+        "pt": "",
+        "en": ""
+      },
+      "platform": {
+        "pt": "App mobile",
+        "en": "Mobile app"
+      },
+      "team": {
+        "pt": "",
+        "en": ""
+      },
+      "tools": [
+        "Figma"
+      ]
+    },
+    "challenge": {
+      "enabled": true,
+      "headline": {
+        "pt": "Organizar o dia a dia de times pequenos, sem a complexidade corporativa.",
+        "en": "Organizing small teams' day-to-day without corporate complexity."
+      },
+      "body": {
+        "pt": "Ferramentas de gestão de tarefas costumam ser pensadas para grandes empresas. Times pequenos precisavam de algo leve, direto e fácil de adotar.",
+        "en": "Task management tools are usually built for large companies. Small teams needed something light, direct and easy to adopt."
+      },
+      "items": [
+        {
+          "title": {
+            "pt": "Ferramentas pesadas demais",
+            "en": "Tools that are too heavy"
+          },
+          "body": {
+            "pt": "Recursos corporativos atrapalham quem só precisa organizar o dia.",
+            "en": "Corporate features get in the way of teams that just need to organize their day."
+          }
+        },
+        {
+          "title": {
+            "pt": "Fluxo principal claro",
+            "en": "A clear main flow"
+          },
+          "body": {
+            "pt": "Criar, acompanhar e concluir tarefas precisava ser imediato.",
+            "en": "Creating, tracking and completing tasks had to be immediate."
+          }
+        },
+        {
+          "title": {
+            "pt": "Leveza visual",
+            "en": "Visual lightness"
+          },
+          "body": {
+            "pt": "A identidade precisava transmitir organização sem parecer burocrática.",
+            "en": "The identity had to convey organization without feeling bureaucratic."
+          }
+        }
+      ]
+    },
+    "results": {
+      "enabled": true,
+      "body": {
+        "pt": "O que o processo entregou.",
+        "en": "What the process delivered."
+      },
+      "metrics": [],
+      "highlights": [
+        {
+          "title": {
+            "pt": "Persona e fluxo mapeados",
+            "en": "Persona and flow mapped"
+          },
+          "body": {
+            "pt": "Discovery a partir do problema real, com persona, processo e etapas do fluxo.",
+            "en": "Discovery from the real problem, with persona, process and flow steps."
+          }
+        },
+        {
+          "title": {
+            "pt": "Protótipo de alta fidelidade",
+            "en": "High-fidelity prototype"
+          },
+          "body": {
+            "pt": "Da wireframe à interface final do fluxo principal do app.",
+            "en": "From wireframe to the final interface of the app's main flow."
+          }
+        },
+        {
+          "title": {
+            "pt": "Validado com usuários",
+            "en": "Validated with users"
+          },
+          "body": {
+            "pt": "O processo terminou com teste de usuário antes da entrega.",
+            "en": "The process closed with user testing before handoff."
+          }
+        }
+      ]
+    },
+    "personas": {
+      "enabled": false,
+      "body": {
+        "pt": "",
+        "en": ""
+      },
+      "items": []
     },
     "foundations": {
       "enabled": true,

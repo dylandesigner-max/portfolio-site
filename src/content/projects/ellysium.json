@@ -37,6 +37,7 @@
         "en": ""
       }
     },
+    "accentColor": "#3D6FE0",
     "projectUrl": "https://ellysium.dylan-dsgner.workers.dev/pt-BR/",
     "about": {
       "enabled": true,
@@ -44,6 +45,144 @@
         "pt": "Ellysium é o design system criado para a Revon, marca que precisava de uma linguagem visual única, escalável e pronta para times de produto trabalharem sem fricção entre design e código.\n\nO projeto nasceu da necessidade de padronizar decisões visuais que antes viviam soltas: cores sem nome, tipografia sem hierarquia clara, componentes reconstruídos do zero a cada tela. Conduzi sozinho a construção de toda a fundação visual, do token à interface, com suporte nativo a tema claro e escuro desde a primeira decisão de cor.",
         "en": "Ellysium is the design system built for Revon, a brand that needed a single, scalable visual language ready for product teams to work with no friction between design and code.\n\nThe project came from the need to standardize visual decisions that used to live scattered: unnamed colors, typography with no clear hierarchy, components rebuilt from scratch on every screen. I led the entire visual foundation solo, from token to interface, with native light and dark theme support built in from the very first color decision."
       }
+    },
+    "facts": {
+      "enabled": true,
+      "duration": {
+        "pt": "",
+        "en": ""
+      },
+      "platform": {
+        "pt": "Web e marca (digital e físico)",
+        "en": "Web and brand (digital and physical)"
+      },
+      "team": {
+        "pt": "Solo, ponta a ponta",
+        "en": "Solo, end to end"
+      },
+      "tools": [
+        "Figma"
+      ]
+    },
+    "challenge": {
+      "enabled": true,
+      "headline": {
+        "pt": "Decisões visuais soltas, refeitas do zero a cada tela.",
+        "en": "Loose visual decisions, rebuilt from scratch on every screen."
+      },
+      "body": {
+        "pt": "A Revon precisava de uma linguagem visual única, escalável e pronta para times de produto trabalharem sem fricção entre design e código.",
+        "en": "Revon needed a single, scalable visual language that product teams could use without friction between design and code."
+      },
+      "items": [
+        {
+          "title": {
+            "pt": "Cores sem nome",
+            "en": "Unnamed colors"
+          },
+          "body": {
+            "pt": "Valores soltos em vez de tokens tornavam cada decisão de cor imprevisível.",
+            "en": "Loose values instead of tokens made every color decision unpredictable."
+          }
+        },
+        {
+          "title": {
+            "pt": "Tipografia sem hierarquia",
+            "en": "Typography without hierarchy"
+          },
+          "body": {
+            "pt": "Não havia uma escala clara de estilos para títulos e corpo de texto.",
+            "en": "There was no clear scale of styles for headings and body text."
+          }
+        },
+        {
+          "title": {
+            "pt": "Componentes reconstruídos",
+            "en": "Rebuilt components"
+          },
+          "body": {
+            "pt": "Cada tela recriava botões, campos e listas do zero.",
+            "en": "Every screen recreated buttons, fields and lists from scratch."
+          }
+        }
+      ]
+    },
+    "results": {
+      "enabled": true,
+      "body": {
+        "pt": "A fundação visual entregue para a Revon.",
+        "en": "The visual foundation delivered for Revon."
+      },
+      "metrics": [
+        {
+          "value": "70+",
+          "label": {
+            "pt": "Ícones na biblioteca",
+            "en": "Icons in the library"
+          }
+        },
+        {
+          "value": "17",
+          "label": {
+            "pt": "Estilos tipográficos responsivos",
+            "en": "Responsive type styles"
+          }
+        },
+        {
+          "value": "2",
+          "label": {
+            "pt": "Temas nativos: claro e escuro",
+            "en": "Native themes: light and dark"
+          }
+        },
+        {
+          "value": "8pt",
+          "label": {
+            "pt": "Grid de espaçamento",
+            "en": "Spacing grid"
+          }
+        }
+      ],
+      "highlights": [
+        {
+          "title": {
+            "pt": "Tokens semânticos",
+            "en": "Semantic tokens"
+          },
+          "body": {
+            "pt": "Cada decisão visual parte de um token nomeado, nunca de um valor solto.",
+            "en": "Every visual decision starts from a named token, never a loose value."
+          }
+        },
+        {
+          "title": {
+            "pt": "Pronto para código",
+            "en": "Code-ready"
+          },
+          "body": {
+            "pt": "Componentes documentados para consumo direto via variáveis CSS.",
+            "en": "Components documented for direct use through CSS variables."
+          }
+        },
+        {
+          "title": {
+            "pt": "Marca consistente em qualquer superfície",
+            "en": "Consistent brand on any surface"
+          },
+          "body": {
+            "pt": "Da fachada a produtos físicos, a Revon mantém peso, cor e proporção.",
+            "en": "From storefront to physical products, Revon keeps its weight, color and proportion."
+          }
+        }
+      ]
+    },
+    "personas": {
+      "enabled": false,
+      "body": {
+        "pt": "",
+        "en": ""
+      },
+      "items": []
     },
     "foundations": {
       "enabled": true,

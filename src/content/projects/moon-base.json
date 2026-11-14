@@ -36,12 +36,91 @@
         "en": ""
       }
     },
+    "accentColor": "#0A72E0",
     "about": {
       "enabled": true,
       "body": {
         "pt": "Moon Base é a landing page e a identidade visual de uma comunidade de web design. O desafio foi criar uma primeira impressão de alto impacto, com hierarquia clara entre proposta de valor, prova social e chamadas para ação.",
         "en": "Moon Base is the landing page and visual identity for a web design community. The challenge was to craft a high-impact first impression, with clear hierarchy between the value proposition, social proof and calls to action."
       }
+    },
+    "facts": {
+      "enabled": true,
+      "duration": {
+        "pt": "",
+        "en": ""
+      },
+      "platform": {
+        "pt": "Web (landing page)",
+        "en": "Web (landing page)"
+      },
+      "team": {
+        "pt": "",
+        "en": ""
+      },
+      "tools": [
+        "Figma"
+      ]
+    },
+    "challenge": {
+      "enabled": true,
+      "headline": {
+        "pt": "Uma primeira impressão de alto impacto para uma comunidade de web design.",
+        "en": "A high-impact first impression for a web design community."
+      },
+      "body": {
+        "pt": "",
+        "en": ""
+      },
+      "items": [
+        {
+          "title": {
+            "pt": "Proposta de valor clara",
+            "en": "Clear value proposition"
+          },
+          "body": {
+            "pt": "O visitante precisava entender a comunidade nos primeiros segundos.",
+            "en": "Visitors needed to understand the community within seconds."
+          }
+        },
+        {
+          "title": {
+            "pt": "Prova social",
+            "en": "Social proof"
+          },
+          "body": {
+            "pt": "Depoimentos e números precisavam reforçar a credibilidade sem competir com a mensagem.",
+            "en": "Testimonials and numbers had to build credibility without competing with the message."
+          }
+        },
+        {
+          "title": {
+            "pt": "Chamadas para ação",
+            "en": "Calls to action"
+          },
+          "body": {
+            "pt": "A hierarquia precisava levar naturalmente até a inscrição.",
+            "en": "The hierarchy had to lead naturally to sign-up."
+          }
+        }
+      ]
+    },
+    "results": {
+      "enabled": false,
+      "body": {
+        "pt": "",
+        "en": ""
+      },
+      "metrics": [],
+      "highlights": []
+    },
+    "personas": {
+      "enabled": false,
+      "body": {
+        "pt": "",
+        "en": ""
+      },
+      "items": []
     },
     "foundations": {
       "enabled": false,
