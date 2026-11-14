@@ -61,7 +61,8 @@
         "en": "Solo, end to end"
       },
       "tools": [
-        "Figma"
+        "Figma",
+        "Claude Code"
       ]
     },
     "challenge": {
@@ -223,7 +224,7 @@
             "pt": "31 anos · Hospitais e estrada · Celular em campo",
             "en": "31 years old · Hospitals and the road · Phone in the field"
           },
-          "avatar": "",
+          "avatar": "/projects/askray/close-up-portrait-young-bearded-man-white-shirt-jacket-posing-camera-with-broad-smile-isolated-gray-0mwd7.jpg",
           "bio": {
             "pt": "Instala, mantém e repara tomógrafos dentro de hospitais, seguindo os manuais do fabricante, e registra cada atendimento. Antes da visita, se prepara estacionado, no notebook. Na frente do equipamento, usa o celular com as mãos ocupadas.",
             "en": "Installs, maintains and repairs CT scanners inside hospitals, following manufacturer manuals, and records every service. Before the visit he prepares parked, on the laptop. At the equipment, he uses his phone with busy hands."
