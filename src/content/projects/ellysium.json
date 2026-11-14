@@ -49,8 +49,8 @@
     "facts": {
       "enabled": true,
       "duration": {
-        "pt": "",
-        "en": ""
+        "pt": "1,5 mês",
+        "en": "1,5 month"
       },
       "platform": {
         "pt": "Web e marca (digital e físico)",
@@ -61,14 +61,16 @@
         "en": "Solo, end to end"
       },
       "tools": [
-        "Figma"
+        "Figma",
+        "Storybook",
+        "Claude Code"
       ]
     },
     "challenge": {
       "enabled": true,
       "headline": {
-        "pt": "Decisões visuais soltas, refeitas do zero a cada tela.",
-        "en": "Loose visual decisions, rebuilt from scratch on every screen."
+        "pt": "Construir a base escalável do sistema Revon",
+        "en": "Building the scalable foundation of the Revon system"
       },
       "body": {
         "pt": "A Revon precisava de uma linguagem visual única, escalável e pronta para times de produto trabalharem sem fricção entre design e código.",
@@ -77,8 +79,8 @@
       "items": [
         {
           "title": {
-            "pt": "Cores sem nome",
-            "en": "Unnamed colors"
+            "pt": "Falta de padronização de tokens",
+            "en": "Lack of token standardization"
           },
           "body": {
             "pt": "Valores soltos em vez de tokens tornavam cada decisão de cor imprevisível.",
@@ -97,12 +99,12 @@
         },
         {
           "title": {
-            "pt": "Componentes reconstruídos",
-            "en": "Rebuilt components"
+            "pt": "Reconstrução completa dos componentes",
+            "en": "Complete reconstruction of the components."
           },
           "body": {
-            "pt": "Cada tela recriava botões, campos e listas do zero.",
-            "en": "Every screen recreated buttons, fields and lists from scratch."
+            "pt": "Remover a aparência de IA, paddings sem respiro, falta de variação de estados e excesso de textos e elementos.",
+            "en": "Remove the AI-like appearance, padding without breathing room, lack of state variation, and excessive text and elements."
           }
         }
       ]
@@ -110,8 +112,8 @@
     "results": {
       "enabled": true,
       "body": {
-        "pt": "A fundação visual entregue para a Revon.",
-        "en": "The visual foundation delivered for Revon."
+        "pt": "Muito mais potencial para escalar sem perder qualidade de interface.",
+        "en": "Much greater potential for scaling without sacrificing interface quality."
       },
       "metrics": [
         {
@@ -133,13 +135,6 @@
           "label": {
             "pt": "Temas nativos: claro e escuro",
             "en": "Native themes: light and dark"
-          }
-        },
-        {
-          "value": "8pt",
-          "label": {
-            "pt": "Grid de espaçamento",
-            "en": "Spacing grid"
           }
         }
       ],
