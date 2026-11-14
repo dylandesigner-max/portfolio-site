@@ -56,11 +56,14 @@
         "en": "Web (widescreen, desktop and mobile)"
       },
       "team": {
-        "pt": "Solo, ponta a ponta",
-        "en": "Solo, end to end"
+        "pt": "",
+        "en": ""
       },
       "tools": [
-        "Figma"
+        "Figma",
+        "Confluence",
+        "Trello",
+        "Claude Code"
       ]
     },
     "challenge": {
