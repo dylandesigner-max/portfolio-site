@@ -5,6 +5,7 @@ import auge from "@/content/projects/auge.json";
 import pronto from "@/content/projects/pronto.json";
 import gestaoAVista from "@/content/projects/gestao-a-vista.json";
 import ellysium from "@/content/projects/ellysium.json";
+import askray from "@/content/projects/askray.json";
 
 import type { Project } from "@/lib/project-types";
 
@@ -26,4 +27,5 @@ export const projects: Project[] = [
   pronto,
   gestaoAVista,
   ellysium,
+  askray,
 ] as Project[];
