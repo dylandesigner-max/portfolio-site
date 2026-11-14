@@ -2,8 +2,8 @@
   "slug": "ellysium",
   "year": "2026",
   "role": {
-    "pt": "Product Designer, ponta a ponta",
-    "en": "Product Designer, end to end"
+    "pt": "Design Engineer",
+    "en": "Design Engineer"
   },
   "title": "Ellysium",
   "tagline": {
@@ -57,8 +57,8 @@
         "en": "Web and brand (digital and physical)"
       },
       "team": {
-        "pt": "Solo, ponta a ponta",
-        "en": "Solo, end to end"
+        "pt": "",
+        "en": ""
       },
       "tools": [
         "Figma",
