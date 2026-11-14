@@ -42,17 +42,26 @@ export function SmoothScrollProvider({ children }: { children: React.ReactNode }
   }, [reduce]);
 
   useEffect(() => {
-    lenis?.scrollTo(0, { immediate: true });
+    if (!lenis) return;
+    lenis.scrollTo(0, { immediate: true });
+    // The new page's content is in the DOM by now; recompute the scroll
+    // limit straight away instead of waiting on the observer below.
+    lenis.resize();
+    const frame = requestAnimationFrame(() => lenis.resize());
+    return () => cancelAnimationFrame(frame);
   }, [pathname, lenis]);
 
-  // Lazy-loaded images (and anything else that grows the page after mount)
-  // change document height without Lenis knowing, which leaves its internal
-  // scroll limit stale and the page unable to reach true bottom until a
-  // native scrollbar drag forces a recompute. Keep it in sync as content resizes.
+  // Lenis caches the page height as its scroll limit and only refreshes it
+  // when its content element resizes. Its default content element is
+  // <html>, which is `h-full` here — pinned to the viewport height — so it
+  // never resizes: after a client-side navigation to a longer page (or once
+  // lazy images grow it), the limit stays at the old height and scrolling
+  // stops partway down until a reload. <body> (min-h-full) grows with the
+  // content, so watch that instead.
   useEffect(() => {
     if (!lenis) return;
     const resizeObserver = new ResizeObserver(() => lenis.resize());
-    resizeObserver.observe(document.documentElement);
+    resizeObserver.observe(document.body);
     return () => resizeObserver.disconnect();
   }, [lenis]);
 

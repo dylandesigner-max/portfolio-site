@@ -38,14 +38,22 @@ export function RouteTransitionProvider({ children }: { children: React.ReactNod
         return;
       }
 
+      // Scrolling is paused while the overlay covers the screen. If anything
+      // interrupts the sequence, `finally` still resumes it — otherwise the
+      // page would stay unscrollable (and later navigations blocked by
+      // busyRef) until a reload.
       lenis?.stop();
-      await controls.start({ y: "0%", transition: { duration: 0.6, ease: EASE } });
-      router.push(href);
-      await new Promise((resolve) => setTimeout(resolve, 280));
-      await controls.start({ y: "-100%", transition: { duration: 0.6, ease: EASE } });
-      controls.set({ y: "100%" });
-      lenis?.start();
-      busyRef.current = false;
+      try {
+        await controls.start({ y: "0%", transition: { duration: 0.6, ease: EASE } });
+        router.push(href);
+        await new Promise((resolve) => setTimeout(resolve, 280));
+        await controls.start({ y: "-100%", transition: { duration: 0.6, ease: EASE } });
+      } finally {
+        controls.set({ y: "100%" });
+        lenis?.start();
+        lenis?.resize();
+        busyRef.current = false;
+      }
     },
     [controls, lenis, reduce, router],
   );
