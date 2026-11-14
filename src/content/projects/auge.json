@@ -37,13 +37,207 @@
         "en": "Auge project back cover"
       }
     },
+    "accentColor": "#FFD970",
     "projectUrl": "https://augeoficial.com.br/institutional/index.html",
+    "appStoreUrl": "https://apps.apple.com/us/app/auge-app/id6808378867",
+    "playStoreUrl": "https://play.google.com/store/apps/details?id=br.com.augeoficial.student&hl=en",
     "about": {
       "enabled": true,
       "body": {
         "pt": "Auge é uma plataforma de infoprodutos: produtores criam, editam e vendem seus produtos com fluxos ágeis e facilitados, enquanto alunos acessam e consomem seus cursos com uma experiência de streaming. A plataforma reúne área de membros white label, checkout de alta conversão, criador automático de landing pages, afiliados, co-produtores e muito mais.\n\nAtuo no time de Product Design conduzindo discoveries semanais: dinâmicas de pesquisa, co-criação e ideação com o time, comunicação de decisões de design para stakeholders e construção de protótipos navegáveis.",
         "en": "Auge is an infoproduct platform: creators build, edit and sell their products through fast, streamlined flows, while students access and consume their courses through a streaming-like experience. The platform brings together a white-label member area, a high-conversion checkout, an automatic landing page builder, affiliates, co-producers and more.\n\nI work on the Product Design team running weekly discoveries: research dynamics, co-creation and ideation with the team, communicating design decisions to stakeholders, and building navigable prototypes."
       }
+    },
+    "facts": {
+      "enabled": true,
+      "duration": {
+        "pt": "",
+        "en": ""
+      },
+      "platform": {
+        "pt": "Web (desktop) e mobile",
+        "en": "Web (desktop) and mobile"
+      },
+      "team": {
+        "pt": "",
+        "en": ""
+      },
+      "tools": [
+        "Figma",
+        "After Effects",
+        "Trello",
+        "Confluence"
+      ]
+    },
+    "challenge": {
+      "enabled": true,
+      "headline": {
+        "pt": "Duas jornadas muito diferentes na mesma plataforma: quem vende e quem aprende.",
+        "en": "Two very different journeys on one platform: those who sell and those who learn."
+      },
+      "body": {
+        "pt": "Produtores precisam criar, editar e vender seus infoprodutos sem atrito, enquanto alunos esperam uma experiência de consumo tão fluida quanto um streaming. O desafio era equilibrar essas duas frentes em um só produto, preservando a marca de cada produtor.",
+        "en": "Producers need to create, edit and sell their infoproducts without friction, while students expect a consumption experience as smooth as a streaming service. The challenge was balancing both sides in a single product while preserving each producer's brand."
+      },
+      "items": [
+        {
+          "title": {
+            "pt": "Criação e venda sem atrito",
+            "en": "Frictionless creation and sales"
+          },
+          "body": {
+            "pt": "Criar, editar e publicar um infoproduto precisava ser ágil, sem exigir conhecimento técnico do produtor.",
+            "en": "Creating, editing and publishing an infoproduct had to be fast, with no technical knowledge required from the producer."
+          }
+        },
+        {
+          "title": {
+            "pt": "Engajamento do aluno",
+            "en": "Student engagement"
+          },
+          "body": {
+            "pt": "Alunos esperam uma experiência de streaming, e manter a constância ao longo do curso pedia recursos de apoio ao estudo e gamificação.",
+            "en": "Students expect a streaming-like experience, and keeping them consistent throughout a course called for study tools and gamification."
+          }
+        },
+        {
+          "title": {
+            "pt": "Uma marca para cada produtor",
+            "en": "A brand for every producer"
+          },
+          "body": {
+            "pt": "A área de membros precisava ser white label, refletindo a identidade de cada produtor sem perder a consistência da plataforma.",
+            "en": "The member area had to be white-label, reflecting each producer's identity without losing the platform's consistency."
+          }
+        }
+      ]
+    },
+    "results": {
+      "enabled": true,
+      "body": {
+        "pt": "O que o trabalho de design entregou para produtores, alunos e para o time.",
+        "en": "What the design work delivered for producers, students and the team."
+      },
+      "metrics": [
+        {
+          "value": "2",
+          "label": {
+            "pt": "Apps publicados na App Store e na Google Play",
+            "en": "Apps published on the App Store and Google Play"
+          }
+        },
+        {
+          "value": "70+",
+          "label": {
+            "pt": "Componentes no design system",
+            "en": "Components in the design system"
+          }
+        },
+        {
+          "value": "−40%",
+          "label": {
+            "pt": "Erros na execução de tarefas, do MVP à V2 da plataforma",
+            "en": "Task execution errors, from the MVP to the platform's V2"
+          }
+        }
+      ],
+      "highlights": [
+        {
+          "title": {
+            "pt": "Experiência de streaming",
+            "en": "Streaming-like experience"
+          },
+          "body": {
+            "pt": "Player de aula com ferramentas de IA, painel de compras e navegação pensada para maratonar conteúdo.",
+            "en": "A lesson player with AI tools, a purchases dashboard and navigation built for binge-learning."
+          }
+        },
+        {
+          "title": {
+            "pt": "Engajamento com gamificação",
+            "en": "Engagement through gamification"
+          },
+          "body": {
+            "pt": "Sequências e ranking acompanham a jornada do aluno e incentivam a constância nos estudos.",
+            "en": "Streaks and rankings follow the student's journey and encourage consistent study."
+          }
+        },
+        {
+          "title": {
+            "pt": "Áreas de membros white label",
+            "en": "White-label member areas"
+          },
+          "body": {
+            "pt": "Desenvolvi um builder inteligente para produtores construírem a própria área de membros, personalizada com a identidade da sua marca.",
+            "en": "I designed a smart builder that lets producers build their own member area, customized with their brand identity."
+          }
+        }
+      ]
+    },
+    "personas": {
+      "enabled": true,
+      "body": {
+        "pt": "Os dois perfis que guiaram as decisões de design, sintetizados a partir dos mapas de empatia.",
+        "en": "The two profiles that guided design decisions, synthesized from the empathy maps."
+      },
+      "items": [
+        {
+          "name": "Camila Rocha",
+          "role": {
+            "pt": "Produtora de infoprodutos",
+            "en": "Infoproduct creator"
+          },
+          "meta": {
+            "pt": "34 anos · Vende cursos online",
+            "en": "34 years old · Sells online courses"
+          },
+          "avatar": "",
+          "bio": {
+            "pt": "Especialista no seu assunto, mas não em tecnologia. Quer lançar e vender cursos rápido, com uma página que tenha a cara da sua marca.",
+            "en": "An expert in her field, but not in technology. She wants to launch and sell courses fast, with pages that look like her brand."
+          },
+          "frustrations": {
+            "pt": "Ferramentas complexas para montar e editar cursos\nPáginas de venda genéricas, sem a identidade da marca\nPouca visibilidade sobre vendas e afiliados",
+            "en": "Complex tools to build and edit courses\nGeneric sales pages without her brand identity\nLittle visibility into sales and affiliates"
+          },
+          "goals": {
+            "pt": "Publicar e vender um curso em poucos passos\nTer uma área de membros com a sua marca\nAcompanhar vendas e resultados num só lugar",
+            "en": "Publish and sell a course in just a few steps\nHave a member area with her own brand\nTrack sales and results in one place"
+          },
+          "quote": {
+            "pt": "Quero gastar meu tempo criando conteúdo, não brigando com a ferramenta.",
+            "en": "I want to spend my time creating content, not fighting the tool."
+          }
+        },
+        {
+          "name": "Lucas Almeida",
+          "role": {
+            "pt": "Aluno",
+            "en": "Student"
+          },
+          "meta": {
+            "pt": "26 anos · Estuda à noite, pelo celular",
+            "en": "26 years old · Studies at night, on his phone"
+          },
+          "avatar": "",
+          "bio": {
+            "pt": "Comprou alguns cursos para mudar de área. Estuda nos intervalos e à noite, quase sempre pelo celular, e perde o ritmo com facilidade.",
+            "en": "Bought a few courses to switch careers. Studies during breaks and at night, mostly on his phone, and easily loses momentum."
+          },
+          "frustrations": {
+            "pt": "Plataformas confusas para achar onde parou\nExperiência ruim no celular\nFalta de motivação para terminar os cursos",
+            "en": "Confusing platforms to find where he left off\nPoor mobile experience\nLack of motivation to finish courses"
+          },
+          "goals": {
+            "pt": "Retomar a aula de onde parou, em qualquer tela\nSentir que está progredindo\nTirar dúvidas sem sair da aula",
+            "en": "Resume the lesson where he left off, on any screen\nFeel that he's making progress\nGet answers without leaving the lesson"
+          },
+          "quote": {
+            "pt": "Se fosse tão fácil quanto assistir uma série, eu terminava todos os cursos.",
+            "en": "If it were as easy as watching a series, I'd finish every course."
+          }
+        }
+      ]
     },
     "foundations": {
       "enabled": true,

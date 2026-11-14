@@ -37,6 +37,7 @@
         "en": ""
       }
     },
+    "accentColor": "#6A3DF5",
     "pdfHref": "/projects/contasco/ContasCo-Case-UXUI-Dylan.pdf",
     "about": {
       "enabled": true,
@@ -44,6 +45,131 @@
         "pt": "Account Managers de agências e times de marketing vivem entre abas: CRM, planilhas de contrato, analytics e ferramentas de tarefas para entender a saúde real de cada cliente.\n\nO ContasCo centraliza a gestão de clientes e projetos em um único painel, dando visão 360º de cada conta (saúde, métricas, histórico e contratos) sem sair de uma única tela. Conduzi sozinho todo o processo em duas semanas: pesquisa, definição, ideação, prototipação, UI, design system e teste de usabilidade.\n\nConfira um dos testes de usabilidade completo no link \"ver projeto\"",
         "en": "Account Managers at agencies and marketing teams live between tabs: CRM, contract spreadsheets, analytics and task tools just to understand the real health of each client.\n\nContasCo centralizes client and project management in a single dashboard, giving a 360° view of each account (health, metrics, history and contracts) without leaving one screen. I ran the entire process solo over two weeks: research, definition, ideation, prototyping, UI, design system and usability testing.\n\nCheck out one of the full usability tests at the 'view project' link"
       }
+    },
+    "facts": {
+      "enabled": true,
+      "duration": {
+        "pt": "2 semanas",
+        "en": "2 weeks"
+      },
+      "platform": {
+        "pt": "Web (desktop)",
+        "en": "Web (desktop)"
+      },
+      "team": {
+        "pt": "Solo, ponta a ponta",
+        "en": "Solo, end to end"
+      },
+      "tools": [
+        "Figma",
+        "Notion"
+      ]
+    },
+    "challenge": {
+      "enabled": true,
+      "headline": {
+        "pt": "Account Managers perdiam a visão do cliente no meio de tantas abas.",
+        "en": "Account Managers were losing sight of the client across too many tabs."
+      },
+      "body": {
+        "pt": "Para entender a saúde real de cada conta, eles alternavam entre CRM, planilhas de contrato, analytics e ferramentas de tarefas. O desafio era reunir tudo isso em uma única tela, sem sobrecarregar a interface.",
+        "en": "To understand each account's real health, they jumped between CRM, contract spreadsheets, analytics and task tools. The challenge was bringing it all into a single screen without overloading the interface."
+      },
+      "items": [
+        {
+          "title": {
+            "pt": "Informação fragmentada",
+            "en": "Fragmented information"
+          },
+          "body": {
+            "pt": "Saúde da conta, métricas, histórico e contratos viviam em ferramentas diferentes.",
+            "en": "Account health, metrics, history and contracts lived in different tools."
+          }
+        },
+        {
+          "title": {
+            "pt": "Troca constante de contexto",
+            "en": "Constant context switching"
+          },
+          "body": {
+            "pt": "Cada consulta exigia abrir várias abas e cruzar dados manualmente.",
+            "en": "Every lookup meant opening several tabs and cross-checking data by hand."
+          }
+        },
+        {
+          "title": {
+            "pt": "Prazo curto",
+            "en": "Tight timeline"
+          },
+          "body": {
+            "pt": "Todo o processo, da pesquisa ao teste de usabilidade, precisava caber em duas semanas.",
+            "en": "The whole process, from research to usability testing, had to fit in two weeks."
+          }
+        }
+      ]
+    },
+    "results": {
+      "enabled": true,
+      "body": {
+        "pt": "O que o projeto entregou em duas semanas.",
+        "en": "What the project delivered in two weeks."
+      },
+      "metrics": [
+        {
+          "value": "2 sem.",
+          "label": {
+            "pt": "Do discovery ao protótipo testado",
+            "en": "From discovery to a tested prototype"
+          }
+        },
+        {
+          "value": "360°",
+          "label": {
+            "pt": "Visão de cada conta em um único painel",
+            "en": "View of each account in a single panel"
+          }
+        }
+      ],
+      "highlights": [
+        {
+          "title": {
+            "pt": "Painel único do cliente",
+            "en": "Single client panel"
+          },
+          "body": {
+            "pt": "Saúde da conta, métricas, histórico de interações e contratos reunidos na tela de Detalhes do Cliente.",
+            "en": "Account health, metrics, interaction history and contracts together on the Client Details screen."
+          }
+        },
+        {
+          "title": {
+            "pt": "Base para um design system",
+            "en": "Groundwork for a design system"
+          },
+          "body": {
+            "pt": "Foundations com cores, tipografia semântica, grid e Lucide Icons como biblioteca de ícones.",
+            "en": "Foundations with colors, semantic typography, a grid and Lucide Icons as the icon library."
+          }
+        },
+        {
+          "title": {
+            "pt": "Validado com usuários",
+            "en": "Validated with users"
+          },
+          "body": {
+            "pt": "Testes de usabilidade fecharam o ciclo de Design Thinking antes da entrega.",
+            "en": "Usability tests closed the Design Thinking loop before handoff."
+          }
+        }
+      ]
+    },
+    "personas": {
+      "enabled": false,
+      "body": {
+        "pt": "",
+        "en": ""
+      },
+      "items": []
     },
     "foundations": {
       "enabled": true,

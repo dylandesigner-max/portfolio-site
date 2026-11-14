@@ -1,7 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowLeft, ArrowUpRight, DownloadSimple } from "@phosphor-icons/react/dist/ssr";
+import {
+  AppleLogo,
+  ArrowLeft,
+  ArrowUpRight,
+  DownloadSimple,
+  GooglePlayLogo,
+} from "@phosphor-icons/react/dist/ssr";
 import { useLocale } from "@/lib/i18n/context";
 import { Container } from "@/components/ui/container";
 import { Reveal } from "@/components/ui/reveal";
@@ -10,12 +16,21 @@ import { ParallaxCover } from "@/components/projects/parallax-cover";
 import { ImageGallery } from "@/components/projects/image-gallery";
 import { VideoGallery } from "@/components/projects/video-gallery";
 import { ProjectLink } from "@/components/projects/project-link";
+import { accentStyle } from "@/lib/accent";
+import { cn } from "@/lib/utils";
+import {
+  ChallengeBlock,
+  FactsCard,
+  PersonasBlock,
+  ResultsBlock,
+  hasFacts,
+} from "@/components/projects/case-sections";
 import type {
   MediaSection as MediaSectionData,
   Project,
   ProjectContent,
   ProjectSection as ProjectSectionData,
-} from "@/lib/projects-data";
+} from "@/lib/project-types";
 
 function ProjectSection({
   label,
@@ -90,7 +105,10 @@ export function ProjectDetail({
   const content = project.content;
 
   return (
-    <div className="pt-24 md:pt-28">
+    <div
+      className={cn("pt-24 md:pt-28", accentStyle(content.accentColor) && "project-accent")}
+      style={accentStyle(content.accentColor)}
+    >
       <Container className="py-12 md:py-16">
         <Link
           href="/projects"
@@ -100,7 +118,7 @@ export function ProjectDetail({
           {t.projectPage.back}
         </Link>
 
-        <div className="mt-8 flex flex-wrap items-start justify-between gap-8">
+        <div className="mt-8 flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between lg:gap-16">
           <div className="max-w-2xl">
             <p className="mb-3 font-mono text-xs uppercase tracking-[0.16em] text-ink-faint">
               {locale === "pt" ? project.role.pt : project.role.en} · {project.year}
@@ -111,42 +129,48 @@ export function ProjectDetail({
             <p className="mt-5 max-w-xl text-base leading-relaxed text-ink-soft md:text-lg">
               {locale === "pt" ? project.tagline.pt : project.tagline.en}
             </p>
+            <div className="mt-6 flex flex-wrap gap-2">
+              {project.tags.map((tag) => (
+                <span key={tag} className="rounded-full border border-line px-3 py-1 text-xs font-medium text-ink-soft">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
 
-            {(content.projectUrl || content.pdfHref) && (
-              <div className="mt-6 flex flex-wrap gap-3">
-                {content.projectUrl && (
-                  <Button
-                    href={content.projectUrl}
-                    external
-                    target="_blank"
-                    rel="noreferrer"
-                    variant="outline"
-                  >
-                    {t.projectPage.viewProject}
-                  </Button>
-                )}
-                {content.pdfHref && (
-                  <Button
-                    href={content.pdfHref}
-                    external
-                    target="_blank"
-                    rel="noreferrer"
-                    variant="outline"
-                    iconNode={<DownloadSimple size={16} weight="bold" aria-hidden="true" />}
-                  >
-                    {t.projectPage.downloadPdf}
-                  </Button>
-                )}
-              </div>
-            )}
-          </div>
-          <div className="flex flex-wrap gap-2">
-            {project.tags.map((tag) => (
-              <span key={tag} className="rounded-full border border-line px-3 py-1 text-xs font-medium text-ink-soft">
-                {tag}
-              </span>
-            ))}
-          </div>
+          {(content.projectUrl || content.appStoreUrl || content.playStoreUrl || content.pdfHref) && (
+            <div className="flex flex-wrap gap-3 lg:shrink-0 lg:flex-nowrap lg:justify-end">
+              {content.projectUrl && (
+                <Button href={content.projectUrl} external target="_blank" rel="noreferrer" variant="primary">
+                  {t.projectPage.viewProject}
+                </Button>
+              )}
+              {content.appStoreUrl && (
+                <Button href={content.appStoreUrl} external target="_blank" rel="noreferrer" variant="outline">
+                  <AppleLogo size={16} weight="fill" aria-hidden="true" />
+                  {t.projectPage.appStore}
+                </Button>
+              )}
+              {content.playStoreUrl && (
+                <Button href={content.playStoreUrl} external target="_blank" rel="noreferrer" variant="outline">
+                  <GooglePlayLogo size={16} weight="fill" aria-hidden="true" />
+                  {t.projectPage.googlePlay}
+                </Button>
+              )}
+              {content.pdfHref && (
+                <Button
+                  href={content.pdfHref}
+                  external
+                  target="_blank"
+                  rel="noreferrer"
+                  variant="outline"
+                  iconNode={<DownloadSimple size={16} weight="bold" aria-hidden="true" />}
+                >
+                  {t.projectPage.downloadPdf}
+                </Button>
+              )}
+            </div>
+          )}
         </div>
       </Container>
 
@@ -159,7 +183,7 @@ export function ProjectDetail({
         </Reveal>
       </Container>
 
-      {content.about.enabled && (
+      {content.about.enabled && !hasFacts(content.facts) && (
         <Container className="grid gap-6 py-16 md:grid-cols-[1fr_1.4fr] md:gap-16 md:py-24">
           <Reveal>
             <h2 className="font-mono text-sm uppercase tracking-[0.1em] text-ink-faint">
@@ -174,11 +198,38 @@ export function ProjectDetail({
         </Container>
       )}
 
+      {hasFacts(content.facts) && (
+        <Container className="grid items-start gap-10 py-16 md:py-24 lg:grid-cols-[1.4fr_1fr] lg:gap-16">
+          {content.about.enabled ? (
+            <div>
+              <Reveal>
+                <h2 className="font-mono text-sm uppercase tracking-[0.1em] text-ink-faint">
+                  {t.projectPage.about}
+                </h2>
+              </Reveal>
+              <Reveal delay={0.06}>
+                <p className="mt-4 max-w-[65ch] whitespace-pre-line text-base leading-relaxed text-ink-soft md:text-lg">
+                  {locale === "pt" ? content.about.body.pt : content.about.body.en}
+                </p>
+              </Reveal>
+            </div>
+          ) : (
+            <span className="hidden lg:block" />
+          )}
+          <Reveal delay={0.1}>
+            <FactsCard project={project} facts={content.facts!} />
+          </Reveal>
+        </Container>
+      )}
+
+      <ChallengeBlock section={content.challenge} />
       <ProjectSection label={t.projectPage.foundations} section={content.foundations} />
       <ProjectSection label={t.projectPage.product} section={content.product} />
       <ProjectSection label={t.projectPage.research} section={content.research} />
+      <PersonasBlock section={content.personas} />
       <ProjectSection label={t.projectPage.designSystem} section={content.designSystem} />
       <VideoSection label={t.projectPage.videos} section={content.videos} />
+      <ResultsBlock section={content.results} />
 
       {content.backCover.enabled && (
         <Container className="border-t border-line py-16 md:py-24">

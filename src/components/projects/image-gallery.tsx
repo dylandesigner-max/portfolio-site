@@ -7,7 +7,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { X } from "@phosphor-icons/react/dist/ssr";
 import { useLenis } from "@/lib/smooth-scroll";
 import { useLocale } from "@/lib/i18n/context";
-import type { GalleryImage } from "@/lib/projects-data";
+import type { GalleryImage } from "@/lib/project-types";
 
 // A local modal mounted/unmounted purely by this component's own state, so
 // AnimatePresence here is safe: it never wraps Next's router-controlled

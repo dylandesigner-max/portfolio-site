@@ -37,12 +37,151 @@
         "en": ""
       }
     },
+    "accentColor": "#F05A3C",
     "about": {
       "enabled": true,
       "body": {
         "pt": "Pronto é um superapp de delivery que combina em um só lugar pedidos de lanches e snacks, compras de mercado e entregas de produtos de marketplace. Foi um projeto curto e objetivo: em pouco tempo, desenvolvi a identidade visual completa da marca, o styleguide, uma landing page moderna de alta conversão para a campanha \"Pronto Week\", três telas do aplicativo e dois criativos para divulgação.\n\nA proposta era transmitir agilidade e simpatia (\"1,2,3... e pronto!\") através de uma paleta vibrante e uma mascote simples: o polegar para cima que dá nome à marca.",
         "en": "Pronto is a delivery superapp that brings snack orders, grocery shopping and marketplace deliveries together in one place. It was a short, focused project: in a short timeframe I built the brand's full visual identity, the styleguide, a modern high-conversion landing page for the \"Pronto Week\" campaign, three app screens and two promotional creatives.\n\nThe brief was to convey speed and friendliness (\"1,2,3... and done!\") through a vibrant palette and a simple mascot: the thumbs-up that gives the brand its name."
       }
+    },
+    "facts": {
+      "enabled": true,
+      "duration": {
+        "pt": "",
+        "en": ""
+      },
+      "platform": {
+        "pt": "Web e app mobile",
+        "en": "Web and mobile app"
+      },
+      "team": {
+        "pt": "Solo, ponta a ponta",
+        "en": "Solo, end to end"
+      },
+      "tools": [
+        "Figma"
+      ]
+    },
+    "challenge": {
+      "enabled": true,
+      "headline": {
+        "pt": "Três tipos de delivery em um só app, com a agilidade do nome.",
+        "en": "Three kinds of delivery in one app, as fast as its name."
+      },
+      "body": {
+        "pt": "A Pronto une lanches, mercado e marketplace. Em um projeto curto, a marca precisava transmitir agilidade e simpatia em todos os pontos de contato.",
+        "en": "Pronto brings together snacks, groceries and marketplace deliveries. In a short project, the brand had to convey speed and friendliness at every touchpoint."
+      },
+      "items": [
+        {
+          "title": {
+            "pt": "Marca do zero",
+            "en": "Brand from scratch"
+          },
+          "body": {
+            "pt": "Identidade, styleguide e mascote precisavam nascer juntos e rápido.",
+            "en": "Identity, styleguide and mascot had to be born together, and fast."
+          }
+        },
+        {
+          "title": {
+            "pt": "Campanha de conversão",
+            "en": "Conversion campaign"
+          },
+          "body": {
+            "pt": "A landing da “Pronto Week” precisava converter com clareza.",
+            "en": "The “Pronto Week” landing page had to convert with clarity."
+          }
+        },
+        {
+          "title": {
+            "pt": "Uma linguagem só",
+            "en": "One language"
+          },
+          "body": {
+            "pt": "App, landing e criativos precisavam soar como a mesma marca.",
+            "en": "App, landing page and creatives had to feel like the same brand."
+          }
+        }
+      ]
+    },
+    "results": {
+      "enabled": true,
+      "body": {
+        "pt": "Entregas de um projeto curto e objetivo.",
+        "en": "Deliverables from a short, focused project."
+      },
+      "metrics": [
+        {
+          "value": "1",
+          "label": {
+            "pt": "Identidade visual completa com styleguide",
+            "en": "Complete visual identity with styleguide"
+          }
+        },
+        {
+          "value": "1",
+          "label": {
+            "pt": "Landing page da campanha Pronto Week",
+            "en": "Pronto Week campaign landing page"
+          }
+        },
+        {
+          "value": "3",
+          "label": {
+            "pt": "Telas do aplicativo",
+            "en": "App screens"
+          }
+        },
+        {
+          "value": "2",
+          "label": {
+            "pt": "Criativos para divulgação",
+            "en": "Promotional creatives"
+          }
+        }
+      ],
+      "highlights": [
+        {
+          "title": {
+            "pt": "Mascote com propósito",
+            "en": "A mascot with purpose"
+          },
+          "body": {
+            "pt": "O polegar para cima dá nome e personalidade à marca: “1,2,3... e pronto!”.",
+            "en": "The thumbs-up gives the brand its name and personality: “1,2,3... and done!”."
+          }
+        },
+        {
+          "title": {
+            "pt": "Paleta vibrante",
+            "en": "Vibrant palette"
+          },
+          "body": {
+            "pt": "Laranja, rosa e verde com variações pastel e escuras garantem contraste e energia.",
+            "en": "Orange, pink and green with pastel and dark variations ensure contrast and energy."
+          }
+        },
+        {
+          "title": {
+            "pt": "Pedido acompanhado em tempo real",
+            "en": "Real-time order tracking"
+          },
+          "body": {
+            "pt": "Do onboarding ao acompanhamento do pedido, o app reforça a promessa de agilidade.",
+            "en": "From onboarding to order tracking, the app reinforces the promise of speed."
+          }
+        }
+      ]
+    },
+    "personas": {
+      "enabled": false,
+      "body": {
+        "pt": "",
+        "en": ""
+      },
+      "items": []
     },
     "foundations": {
       "enabled": true,

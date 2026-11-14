@@ -37,12 +37,144 @@
         "en": ""
       }
     },
+    "accentColor": "#2E60EB",
     "about": {
       "enabled": true,
       "body": {
         "pt": "Gestão à Vista é um sistema omnichannel construído para o nicho de multipropriedade, operando ao mesmo tempo como CRM, base de dados e Business Intelligence para a operação inteira do negócio.\n\nProjetei sozinho, do zero, tanto o design system quanto cada tela da interface: mais de 70 componentes autorais sustentando módulos de atendimento, conversas, tarefas, contatos, relatórios e insights, com suporte nativo a tema claro e escuro em toda a plataforma.",
         "en": "Gestão à Vista is an omnichannel system built for the timeshare industry, operating at once as a CRM, database and Business Intelligence layer for the entire business operation.\n\nI designed the whole thing solo, from scratch: both the design system and every interface screen, with 70+ original components powering modules for support, conversations, tasks, contacts, reports and insights, with native light and dark theme support across the whole platform."
       }
+    },
+    "facts": {
+      "enabled": true,
+      "duration": {
+        "pt": "",
+        "en": ""
+      },
+      "platform": {
+        "pt": "Web (widescreen, desktop e mobile)",
+        "en": "Web (widescreen, desktop and mobile)"
+      },
+      "team": {
+        "pt": "Solo, ponta a ponta",
+        "en": "Solo, end to end"
+      },
+      "tools": [
+        "Figma"
+      ]
+    },
+    "challenge": {
+      "enabled": true,
+      "headline": {
+        "pt": "Uma operação inteira de multipropriedade em um só sistema.",
+        "en": "An entire timeshare operation in a single system."
+      },
+      "body": {
+        "pt": "O produto precisava funcionar ao mesmo tempo como CRM, base de dados e Business Intelligence, atendendo um nicho com rotinas muito próprias.",
+        "en": "The product had to work as a CRM, a database and Business Intelligence at the same time, serving a niche with very specific routines."
+      },
+      "items": [
+        {
+          "title": {
+            "pt": "Três produtos em um",
+            "en": "Three products in one"
+          },
+          "body": {
+            "pt": "CRM, base de dados e BI precisavam conviver sem virar uma interface confusa.",
+            "en": "CRM, database and BI had to coexist without turning into a confusing interface."
+          }
+        },
+        {
+          "title": {
+            "pt": "Atendimento omnichannel",
+            "en": "Omnichannel service"
+          },
+          "body": {
+            "pt": "Conversas de vários canais precisavam chegar ao mesmo fluxo de trabalho.",
+            "en": "Conversations from many channels had to land in the same workflow."
+          }
+        },
+        {
+          "title": {
+            "pt": "Uso em qualquer condição",
+            "en": "Use in any condition"
+          },
+          "body": {
+            "pt": "A operação pedia tema claro e escuro nativos em toda a plataforma.",
+            "en": "The operation required native light and dark themes across the platform."
+          }
+        }
+      ]
+    },
+    "results": {
+      "enabled": true,
+      "body": {
+        "pt": "O que foi construído do zero.",
+        "en": "What was built from scratch."
+      },
+      "metrics": [
+        {
+          "value": "70+",
+          "label": {
+            "pt": "Componentes autorais no design system",
+            "en": "Original components in the design system"
+          }
+        },
+        {
+          "value": "6",
+          "label": {
+            "pt": "Módulos: atendimento, conversas, tarefas, contatos, relatórios e insights",
+            "en": "Modules: service, conversations, tasks, contacts, reports and insights"
+          }
+        },
+        {
+          "value": "2",
+          "label": {
+            "pt": "Temas nativos: claro e escuro",
+            "en": "Native themes: light and dark"
+          }
+        }
+      ],
+      "highlights": [
+        {
+          "title": {
+            "pt": "Design system próprio",
+            "en": "Custom design system"
+          },
+          "body": {
+            "pt": "Componentes documentados por estado: default, hover, ativo, desabilitado e erro.",
+            "en": "Components documented by state: default, hover, active, disabled and error."
+          }
+        },
+        {
+          "title": {
+            "pt": "Operação em um só lugar",
+            "en": "The whole operation in one place"
+          },
+          "body": {
+            "pt": "Do login aos relatórios, todos os módulos seguem a mesma linguagem.",
+            "en": "From login to reports, every module follows the same language."
+          }
+        },
+        {
+          "title": {
+            "pt": "Responsivo de verdade",
+            "en": "Truly responsive"
+          },
+          "body": {
+            "pt": "Grid documentado para widescreen, desktop e mobile.",
+            "en": "A documented grid for widescreen, desktop and mobile."
+          }
+        }
+      ]
+    },
+    "personas": {
+      "enabled": false,
+      "body": {
+        "pt": "",
+        "en": ""
+      },
+      "items": []
     },
     "foundations": {
       "enabled": true,
