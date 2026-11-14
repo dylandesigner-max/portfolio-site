@@ -9,7 +9,7 @@ import { Reveal } from "@/components/ui/reveal";
 import { ProjectLink } from "@/components/projects/project-link";
 import { projects } from "@/lib/projects-data";
 
-const FEATURED_SLUGS = ["auge", "ellysium", "gestao-a-vista"];
+const FEATURED_SLUGS = ["auge", "ellysium", "askray"];
 
 export function ProjectsShowcase() {
   const { t, locale } = useLocale();

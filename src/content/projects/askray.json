@@ -1,0 +1,515 @@
+{
+  "slug": "askray",
+  "year": "2026",
+  "role": {
+    "pt": "Product Designer, ponta a ponta",
+    "en": "Product Designer, end to end"
+  },
+  "title": "AskRay",
+  "tagline": {
+    "pt": "Assistente de IA que entrega o procedimento certo, da fonte certa, para engenheiros de campo de equipamentos médicos.",
+    "en": "An AI assistant that gives medical equipment field engineers the right procedure, from the right source."
+  },
+  "tags": [
+    "AI",
+    "MedTech",
+    "Mobile-first"
+  ],
+  "image": "/projects/askray/capa.png",
+  "imageAlt": {
+    "pt": "Capa do projeto AskRay",
+    "en": "AskRay project cover"
+  },
+  "size": "lg",
+  "content": {
+    "cover": {
+      "src": "/projects/askray/capa.png",
+      "alt": {
+        "pt": "Capa do projeto AskRay",
+        "en": "AskRay project cover"
+      }
+    },
+    "backCover": {
+      "enabled": false,
+      "src": "",
+      "alt": {
+        "pt": "",
+        "en": ""
+      }
+    },
+    "accentColor": "#5FA9EE",
+    "projectUrl": "https://askray.vercel.app/",
+    "about": {
+      "enabled": true,
+      "body": {
+        "pt": "AskRay é um assistente de IA para engenheiros de campo que mantêm equipamentos de imagem médica, como tomógrafos, dentro de hospitais. Ele responde apenas com base nos manuais oficiais e mostra, em cada resposta, de onde veio a informação: documento, versão, página e nível de confiança.\n\nO projeto nasceu de um desafio de UX/UI. Conduzi sozinho todo o processo: discovery com fontes públicas (O*NET, vagas reais do setor e pesquisas com técnicos de campo), persona e Jobs to be Done, benchmarking de concorrentes, ideação, escolha do modelo de IA, wireframes, design system e alta fidelidade, até o produto implementado em código, disponível no botão “Ver projeto”.",
+        "en": "AskRay is an AI assistant for field engineers who maintain medical imaging equipment, such as CT scanners, inside hospitals. It answers only from official manuals and shows, in every answer, where the information came from: document, version, page and confidence level.\n\nThe project started as a UX/UI design challenge. I ran the whole process on my own: discovery with public sources (O*NET, real job postings and field service research), persona and Jobs to be Done, competitor benchmarking, ideation, AI model choice, wireframes, design system and high fidelity, all the way to the product implemented in code, available through the “View project” button."
+      }
+    },
+    "facts": {
+      "enabled": true,
+      "duration": {
+        "pt": "",
+        "en": ""
+      },
+      "platform": {
+        "pt": "Mobile-first, com versão desktop",
+        "en": "Mobile-first, with a desktop version"
+      },
+      "team": {
+        "pt": "Solo, ponta a ponta",
+        "en": "Solo, end to end"
+      },
+      "tools": [
+        "Figma"
+      ]
+    },
+    "challenge": {
+      "enabled": true,
+      "headline": {
+        "pt": "Achar o procedimento certo e atual, rápido e sem erro, com as mãos ocupadas.",
+        "en": "Finding the right, current procedure, fast and without mistakes, with busy hands."
+      },
+      "body": {
+        "pt": "Engenheiros de campo que mantêm equipamentos de imagem médica precisam de um jeito rápido e confiável de encontrar o procedimento certo e atualizado para uma falha específica, ainda no local. Eles trabalham sob pressão de tempo, com as mãos ocupadas, e não podem errar.",
+        "en": "Field service engineers who maintain medical imaging equipment need a fast and trustworthy way to find the right, current procedure for a specific failure while on site. They work under time pressure, with busy hands, and cannot afford mistakes."
+      },
+      "items": [
+        {
+          "title": {
+            "pt": "Tempo perdido procurando informação",
+            "en": "Time lost searching for information"
+          },
+          "body": {
+            "pt": "Buscar informação é a 2ª parte menos querida do trabalho, segundo a The Service Council.",
+            "en": "Searching for information is the #2 least favorite part of the job, according to The Service Council."
+          }
+        },
+        {
+          "title": {
+            "pt": "Não pode errar",
+            "en": "Cannot make mistakes"
+          },
+          "body": {
+            "pt": "73% dizem que ser exato é extremamente importante na função (O*NET).",
+            "en": "73% say being exact is extremely important in the role (O*NET)."
+          }
+        },
+        {
+          "title": {
+            "pt": "Pressão de tempo",
+            "en": "Time pressure"
+          },
+          "body": {
+            "pt": "34% enfrentam prazos rígidos todos os dias (O*NET).",
+            "en": "34% face strict deadlines every day (O*NET)."
+          }
+        },
+        {
+          "title": {
+            "pt": "Medo de procedimento desatualizado",
+            "en": "Fear of an outdated procedure"
+          },
+          "body": {
+            "pt": "Hipótese: a exigência de exatidão e o trabalho guiado por manuais tornam a versão do documento crítica.",
+            "en": "Hypothesis: the accuracy demand and manual-driven work make the document version critical."
+          }
+        },
+        {
+          "title": {
+            "pt": "Dependência de colegas em falhas raras",
+            "en": "Relying on colleagues for rare failures"
+          },
+          "body": {
+            "pt": "Hipótese: 71% têm conversas por telefone todos os dias (O*NET).",
+            "en": "Hypothesis: 71% have phone conversations every day (O*NET)."
+          }
+        },
+        {
+          "title": {
+            "pt": "Documentar toma tempo",
+            "en": "Documentation takes time"
+          },
+          "body": {
+            "pt": "Hipótese: manter o registro de cada atendimento é uma tarefa central da função (O*NET).",
+            "en": "Hypothesis: keeping a record of every service is a core task of the role (O*NET)."
+          }
+        }
+      ]
+    },
+    "results": {
+      "enabled": true,
+      "body": {
+        "pt": "O que o desafio entregou, do discovery ao produto em código.",
+        "en": "What the challenge delivered, from discovery to the product in code."
+      },
+      "metrics": [
+        {
+          "value": "5",
+          "label": {
+            "pt": "Telas mobile-first entregues, todas também em desktop",
+            "en": "Mobile-first screens delivered, all also on desktop"
+          }
+        },
+        {
+          "value": "50+",
+          "label": {
+            "pt": "Componentes com estados no design system",
+            "en": "Components with states in the design system"
+          }
+        },
+        {
+          "value": "11 → 7",
+          "label": {
+            "pt": "Perguntas How Might We agrupadas em 7 clusters de solução",
+            "en": "How Might We questions grouped into 7 solution clusters"
+          }
+        },
+        {
+          "value": "6",
+          "label": {
+            "pt": "Hipóteses-chave com teste e sinal de sucesso definidos",
+            "en": "Key hypotheses with a defined test and success signal"
+          }
+        }
+      ],
+      "highlights": [
+        {
+          "title": {
+            "pt": "Confiança visível",
+            "en": "Visible trust"
+          },
+          "body": {
+            "pt": "Cada resposta mostra documento, versão, página e nível de confiança, e avisa quando existe um manual mais novo.",
+            "en": "Every answer shows document, version, page and confidence level, and warns when a newer manual exists."
+          }
+        },
+        {
+          "title": {
+            "pt": "Uma jornada só",
+            "en": "One journey"
+          },
+          "body": {
+            "pt": "Preparar, diagnosticar e registrar: o relatório de serviço é redigido pela IA a partir da sessão, e o técnico revisa e assina.",
+            "en": "Prepare, diagnose and record: the service report is drafted by AI from the session, and the engineer reviews and signs it."
+          }
+        },
+        {
+          "title": {
+            "pt": "Ray nunca chuta",
+            "en": "Ray never guesses"
+          },
+          "body": {
+            "pt": "Quando não há resposta nos manuais oficiais, o estado “não encontrado” explica o porquê e oferece o próximo passo.",
+            "en": "When the official manuals have no answer, the “not found” state explains why and offers the next step."
+          }
+        }
+      ]
+    },
+    "personas": {
+      "enabled": true,
+      "body": {
+        "pt": "Proto persona construída com dados públicos (O*NET, vaga real da Stryker e The Service Council). Nenhum técnico foi entrevistado ainda: nome e idade são decisões de design.",
+        "en": "Proto persona built from public data (O*NET, a real Stryker job posting and The Service Council). No engineers were interviewed yet: name and age are design decisions."
+      },
+      "items": [
+        {
+          "name": "Ryan Mitchell",
+          "role": {
+            "pt": "Field Service Engineer · sistemas de imagem médica",
+            "en": "Field Service Engineer · medical imaging systems"
+          },
+          "meta": {
+            "pt": "31 anos · Hospitais e estrada · Celular em campo",
+            "en": "31 years old · Hospitals and the road · Phone in the field"
+          },
+          "avatar": "",
+          "bio": {
+            "pt": "Instala, mantém e repara tomógrafos dentro de hospitais, seguindo os manuais do fabricante, e registra cada atendimento. Antes da visita, se prepara estacionado, no notebook. Na frente do equipamento, usa o celular com as mãos ocupadas.",
+            "en": "Installs, maintains and repairs CT scanners inside hospitals, following manufacturer manuals, and records every service. Before the visit he prepares parked, on the laptop. At the equipment, he uses his phone with busy hands."
+          },
+          "frustrations": {
+            "pt": "Perde tempo procurando a informação certa\nNão pode errar e teme seguir um procedimento desatualizado\nDepende de colegas seniores em falhas raras\nDocumentar o atendimento toma tempo",
+            "en": "Loses time searching for the right information\nCannot make mistakes and fears following an outdated procedure\nRelies on senior colleagues for rare failures\nDocumenting the service takes time"
+          },
+          "goals": {
+            "pt": "Diagnosticar a falha e resolver na primeira visita\nTer certeza de que segue a versão oficial e atual\nChegar preparado, com histórico e ordem de serviço\nFechar o atendimento sem burocracia",
+            "en": "Diagnose the failure and fix it on the first visit\nBe sure he follows the official, current version\nArrive prepared, with history and work order\nClose the service without red tape"
+          },
+          "quote": {
+            "pt": "Preciso do procedimento certo, da fonte certa, e com as mãos ocupadas.",
+            "en": "I need the right procedure, from the right source, with my hands full."
+          }
+        }
+      ]
+    },
+    "foundations": {
+      "enabled": true,
+      "body": {
+        "pt": "A base visual do AskRay: logo e variações, cores primitivas, gradientes e vidro, espaçamento, raios e bordas, tipografia e ícones da biblioteca Iconoir. Tudo em modo claro, pensado para ambientes clínicos.",
+        "en": "AskRay's visual foundation: logo and variations, primitive colors, gradients and glass, spacing, radius and borders, typography and Iconoir icons. All in light mode, designed for clinical environments."
+      },
+      "images": [
+        {
+          "src": "/projects/askray/foundations-01.png",
+          "alt": {
+            "pt": "Logo e variações",
+            "en": "Logo and variations"
+          }
+        },
+        {
+          "src": "/projects/askray/foundations-02.png",
+          "alt": {
+            "pt": "Cores primitivas",
+            "en": "Primitive colors"
+          }
+        },
+        {
+          "src": "/projects/askray/foundations-03.png",
+          "alt": {
+            "pt": "Tokens de cor",
+            "en": "Color tokens"
+          }
+        },
+        {
+          "src": "/projects/askray/foundations-04.png",
+          "alt": {
+            "pt": "Gradientes e vidro",
+            "en": "Gradients and glass"
+          }
+        },
+        {
+          "src": "/projects/askray/foundations-05.png",
+          "alt": {
+            "pt": "Espaçamento",
+            "en": "Spacing"
+          }
+        },
+        {
+          "src": "/projects/askray/foundations-06.png",
+          "alt": {
+            "pt": "Raios e bordas",
+            "en": "Radius and borders"
+          }
+        },
+        {
+          "src": "/projects/askray/foundations-07.png",
+          "alt": {
+            "pt": "Tipografia",
+            "en": "Typography"
+          }
+        },
+        {
+          "src": "/projects/askray/foundations-08.png",
+          "alt": {
+            "pt": "Ícones",
+            "en": "Icons"
+          }
+        }
+      ]
+    },
+    "product": {
+      "enabled": true,
+      "body": {
+        "pt": "As cinco telas do desafio, do wireframe à alta fidelidade, em mobile e desktop: Home “Today”, Ask, resposta estruturada, relatórios de serviço e Image Guide. Os wireframes definiram a estrutura antes do estilo. Ao construir as telas com conteúdo real, três decisões mudaram: o ditado virou um modo de voz mãos-livres, o relatório único virou um histórico de relatórios e a foto virou upload de imagem no desktop.",
+        "en": "The challenge's five screens, from wireframe to high fidelity, on mobile and desktop: Home “Today”, Ask, structured answer, service reports and Image Guide. The wireframes set the structure before style. Building the screens with real content changed three decisions: dictation became a hands-free voice mode, a single report became a report history, and taking a photo became uploading an image on desktop."
+      },
+      "images": [
+        {
+          "src": "/projects/askray/wireframe-01.png",
+          "alt": {
+            "pt": "Wireframe: Home, Today",
+            "en": "Wireframe: Home, Today"
+          }
+        },
+        {
+          "src": "/projects/askray/alta-fidelidade-01.png",
+          "alt": {
+            "pt": "Alta fidelidade: Home, Today",
+            "en": "High fidelity: Home, Today"
+          }
+        },
+        {
+          "src": "/projects/askray/wireframe-02.png",
+          "alt": {
+            "pt": "Wireframe: tela Ask",
+            "en": "Wireframe: Ask screen"
+          }
+        },
+        {
+          "src": "/projects/askray/alta-fidelidade-02.png",
+          "alt": {
+            "pt": "Alta fidelidade: tela Ask",
+            "en": "High fidelity: Ask screen"
+          }
+        },
+        {
+          "src": "/projects/askray/wireframe-03.png",
+          "alt": {
+            "pt": "Wireframe: resposta estruturada do Ray",
+            "en": "Wireframe: Ray's structured answer"
+          }
+        },
+        {
+          "src": "/projects/askray/alta-fidelidade-03.png",
+          "alt": {
+            "pt": "Alta fidelidade: resposta estruturada do Ray",
+            "en": "High fidelity: Ray's structured answer"
+          }
+        },
+        {
+          "src": "/projects/askray/wireframe-04.png",
+          "alt": {
+            "pt": "Wireframe: relatórios de serviço",
+            "en": "Wireframe: service reports"
+          }
+        },
+        {
+          "src": "/projects/askray/alta-fidelidade-04.png",
+          "alt": {
+            "pt": "Alta fidelidade: relatórios de serviço",
+            "en": "High fidelity: service reports"
+          }
+        },
+        {
+          "src": "/projects/askray/wireframe-05.png",
+          "alt": {
+            "pt": "Wireframe: Image Guide",
+            "en": "Wireframe: Image Guide"
+          }
+        },
+        {
+          "src": "/projects/askray/alta-fidelidade-05.png",
+          "alt": {
+            "pt": "Alta fidelidade: Image Guide",
+            "en": "High fidelity: Image Guide"
+          }
+        }
+      ]
+    },
+    "research": {
+      "enabled": true,
+      "body": {
+        "pt": "Discovery organizado em um board no FigJam, separando evidência (tirada de uma fonte), hipótese (a validar) e insight (nossa conclusão). Da empatia à prototipação: escolha da persona entre quatro funções da MedTech, Jobs to be Done, benchmarking com Aquant, ServiceMax AI e Dynamics 365 Copilot, How Might We, clusters de solução, escolha do modelo de IA e backlog de telas.",
+        "en": "Discovery organized in a FigJam board, separating evidence (taken from a source), hypothesis (to validate) and insight (our conclusion). From empathy to prototyping: choosing the persona among four MedTech roles, Jobs to be Done, benchmarking against Aquant, ServiceMax AI and Dynamics 365 Copilot, How Might We, solution clusters, AI model choice and the screens backlog."
+      },
+      "images": [
+        {
+          "src": "/projects/askray/pesquisa-01-empathy.png",
+          "alt": {
+            "pt": "Empatia: perguntas e funções da MedTech",
+            "en": "Empathy: questions and MedTech roles"
+          }
+        },
+        {
+          "src": "/projects/askray/pesquisa-02-definition.png",
+          "alt": {
+            "pt": "Definição: proto persona, JTBD e concorrentes",
+            "en": "Definition: proto persona, JTBD and competitors"
+          }
+        },
+        {
+          "src": "/projects/askray/pesquisa-03-ideation.png",
+          "alt": {
+            "pt": "Ideação: benchmarking, How Might We e clusters",
+            "en": "Ideation: benchmarking, How Might We and clusters"
+          }
+        },
+        {
+          "src": "/projects/askray/pesquisa-04-technical-limitations.png",
+          "alt": {
+            "pt": "Limitações técnicas: escolha do modelo de IA",
+            "en": "Technical limitations: AI model choice"
+          }
+        },
+        {
+          "src": "/projects/askray/pesquisa-05-prototyping-1.png",
+          "alt": {
+            "pt": "Prototipação: backlog de telas",
+            "en": "Prototyping: screens backlog"
+          }
+        },
+        {
+          "src": "/projects/askray/pesquisa-06-prototyping-2.png",
+          "alt": {
+            "pt": "Prototipação: funcionalidades por tela",
+            "en": "Prototyping: features per screen"
+          }
+        }
+      ]
+    },
+    "designSystem": {
+      "enabled": true,
+      "body": {
+        "pt": "Mais de 50 componentes com estados, construídos sobre os tokens de cor, espaçamento, raio e tipografia: ações, feedback, conteúdo, entradas, estados da IA (ouvindo, buscando nos manuais), cards, navegação e os blocos da resposta estruturada.",
+        "en": "More than 50 components with states, built on the color, spacing, radius and type tokens: actions, feedback, content, inputs, AI states (listening, searching the manuals), cards, navigation and the building blocks of the structured answer."
+      },
+      "images": [
+        {
+          "src": "/projects/askray/design-system-01.png",
+          "alt": {
+            "pt": "Ações e botões",
+            "en": "Actions and buttons"
+          }
+        },
+        {
+          "src": "/projects/askray/design-system-02.png",
+          "alt": {
+            "pt": "Feedback",
+            "en": "Feedback"
+          }
+        },
+        {
+          "src": "/projects/askray/design-system-03.png",
+          "alt": {
+            "pt": "Conteúdo",
+            "en": "Content"
+          }
+        },
+        {
+          "src": "/projects/askray/design-system-04.png",
+          "alt": {
+            "pt": "Entradas",
+            "en": "Inputs"
+          }
+        },
+        {
+          "src": "/projects/askray/design-system-05.png",
+          "alt": {
+            "pt": "Estados da IA",
+            "en": "AI states"
+          }
+        },
+        {
+          "src": "/projects/askray/design-system-06.png",
+          "alt": {
+            "pt": "Cards",
+            "en": "Cards"
+          }
+        },
+        {
+          "src": "/projects/askray/design-system-07.png",
+          "alt": {
+            "pt": "Navegação",
+            "en": "Navigation"
+          }
+        },
+        {
+          "src": "/projects/askray/design-system-08.png",
+          "alt": {
+            "pt": "Componentes da resposta",
+            "en": "Answer components"
+          }
+        }
+      ]
+    },
+    "videos": {
+      "enabled": false,
+      "body": {
+        "pt": "",
+        "en": ""
+      },
+      "items": []
+    }
+  }
+}
